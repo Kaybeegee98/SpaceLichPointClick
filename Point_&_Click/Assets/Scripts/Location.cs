@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Location : Node
 {
-
+    public Room room;
 }

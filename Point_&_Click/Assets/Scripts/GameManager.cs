@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButton(1) && currentNode.GetComponent<Prop>() != null)
+        if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Location>() != null)
+        {
+            currentNode.GetComponent<Location>().room.Arrive();
+        }
+        else if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Prop>() != null)
         {
             currentNode.GetComponent<Prop>().loc.Arrive();
         }
