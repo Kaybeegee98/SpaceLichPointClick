@@ -40,22 +40,21 @@ public abstract class Node : MonoBehaviour
             col.enabled = false;
         }
 
-        foreach (Node node in reachableNodes)
-        {
-            if (node.col != null)
-            {
-                node.col.enabled = true;
-            }
-        }
+        SetReachableNodes(true);
     }
 
     public virtual void Leave()
+    {
+        SetReachableNodes(false);
+    }
+
+    public void SetReachableNodes(bool set)
     {
         foreach (Node node in reachableNodes)
         {
             if (node.col != null)
             {
-                node.col.enabled = false;
+                node.col.enabled = set;
             }
         }
     }

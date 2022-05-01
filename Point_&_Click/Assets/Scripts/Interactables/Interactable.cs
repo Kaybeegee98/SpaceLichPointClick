@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Prop))]
-public class Interactable : MonoBehaviour
+public abstract class Interactable : MonoBehaviour
 {
 
     void Start()
@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour
         this.enabled = false;
     }
 
-    public void Interact()
+    public virtual void Interact()
     {
         Debug.Log("interacting with " + name);
     }
