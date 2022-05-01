@@ -22,7 +22,7 @@ public abstract class Node : MonoBehaviour
         Arrive();
     }
 
-    public void Arrive()
+    public virtual void Arrive()
     {
         if(GameManager.ins.currentNode != null)
         {
@@ -35,10 +35,7 @@ public abstract class Node : MonoBehaviour
         seq.Append(Camera.main.transform.DOMove(cameraPosition.position, 0.75f));
         seq.Join(Camera.main.transform.DORotate(cameraPosition.rotation.eulerAngles, 0.75f));
 
-        //Camera.main.transform.position = cameraPosition.position;
-        //Camera.main.transform.rotation = cameraPosition.rotation;
-
-        if(col != null)
+        if (col != null)
         {
             col.enabled = false;
         }
@@ -52,7 +49,7 @@ public abstract class Node : MonoBehaviour
         }
     }
 
-    public void Leave()
+    public virtual void Leave()
     {
         foreach (Node node in reachableNodes)
         {
