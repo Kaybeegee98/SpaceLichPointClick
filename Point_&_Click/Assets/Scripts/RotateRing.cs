@@ -5,24 +5,30 @@ using UnityEngine;
 public class RotateRing : MonoBehaviour
 {
     public Vector3 rotation;
+    public Vector3 transformation;
     public GameObject ringClicked;
-    public GameObject ringOne;
-    public GameObject ringTwo;
-    public GameObject ringThree;
+    public GameObject ringInner;
+    public GameObject ringMiddle;
+    public GameObject ringOuter;
+    public GameObject orb;
+    public bool complete;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        complete = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         // when aligned print console msg and set rotation value to 0 to stop moving
-        if (Mathf.Round(ringOne.transform.localRotation.eulerAngles.z) == 270 && Mathf.Round(ringTwo.transform.localRotation.eulerAngles.z) == 90 && Mathf.Round(ringThree.transform.localRotation.eulerAngles.z) == 180) {
+        // if (Mathf.Round(ringInner.transform.localRotation.eulerAngles.y) == 180 && Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) == 90 && Mathf.Round(ringOuter.transform.localRotation.eulerAngles.y) == 180) {
+        if (Mathf.Round(ringInner.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && Mathf.Round(ringOuter.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && !complete) {
             Debug.Log("all aligned");
-            rotation.Set(0,0,0);
+            rotation.Set(0, 0, 0);
+            orb.transform.Translate(transformation);
+            complete = true;
         }
     }
 
@@ -32,6 +38,6 @@ public class RotateRing : MonoBehaviour
         ringClicked.transform.Rotate(rotation);
         
         // print rotation to the console
-        Debug.Log("rotation is " + Mathf.Round(ringClicked.transform.localRotation.eulerAngles.z));
+        Debug.Log("rotation is " + Mathf.Round(ringClicked.transform.localRotation.eulerAngles.y));
     }
 }
