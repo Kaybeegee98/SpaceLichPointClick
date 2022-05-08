@@ -7,10 +7,13 @@ public class GameManager : MonoBehaviour
     public static GameManager ins;
     public IVCanvas ivCanvas;
     public ObsCamera obsCamera;
+    public InventoryDisplay invDisp;
+
     public Node startingNode;
 
     [HideInInspector]
     public Node currentNode;
+    public List<Item> itemsHeld;
 
     void Awake()
     {
