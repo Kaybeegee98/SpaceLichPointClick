@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     public IVCanvas ivCanvas;
     public ObsCamera obsCamera;
     public InventoryDisplay invDisp;
+    public UIControl uiControl;
 
     public Node startingNode;
 
@@ -47,6 +49,14 @@ public class GameManager : MonoBehaviour
             }
 
             currentNode.GetComponent<Prop>().loc.Arrive();
+        }
+        else if (Input.GetMouseButtonUp(1) && uiControl.direction != "north")
+        {
+            Sequence seq = DOTween.Sequence();
+            seq.Append(Camera.main.transform.DOMove(uiControl.north.position, 0.75f));
+            seq.Join(Camera.main.transform.DORotate(uiControl.north.rotation.eulerAngles, 0.75f));
+
+            uiControl.direction = "north";
         }
     }
 }
