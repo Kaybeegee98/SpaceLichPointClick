@@ -65,7 +65,7 @@ public class fishing_minigame : MonoBehaviour
             } else {
                 catchProgress -= progressBarDecay * Time.deltaTime;
                 if (catchProgress <= 0) {
-                    Debug.Log("you lose!!!! fishy");
+                    //Debug.Log("you lose!!!! fishy");
                 }
             }
             catchProgress = Mathf.Clamp(catchProgress, 0, 1);
