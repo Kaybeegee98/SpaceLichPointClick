@@ -10,6 +10,10 @@ public class Collector : Interactable
     {
         GameManager.ins.itemsHeld.Add(myItem);
         GameManager.ins.invDisp.UpdateDisplay();
+        if (GameObject.FindGameObjectWithTag("Orb"))
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Orb"));
+        }
     }
 
 }
