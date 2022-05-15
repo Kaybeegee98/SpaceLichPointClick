@@ -7,6 +7,11 @@ public class Room : Node
 {
     public UIControl uiControl;
 
+    public void Awake()
+    {
+        uiControl.GetComponent<Canvas>().enabled = false;
+    }
+
     public override void Arrive()
     {
         uiControl.GetComponent<Canvas>().enabled = true;

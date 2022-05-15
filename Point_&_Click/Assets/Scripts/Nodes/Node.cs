@@ -24,6 +24,7 @@ public abstract class Node : MonoBehaviour
 
     public virtual void Arrive()
     {
+        Debug.Log("Next");
         if(GameManager.ins.currentNode != null)
         {
             GameManager.ins.currentNode.Leave();
@@ -68,7 +69,6 @@ public abstract class Node : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("No check");
                     node.col.enabled = set;
                 }
             }

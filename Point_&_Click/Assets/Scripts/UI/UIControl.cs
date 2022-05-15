@@ -19,14 +19,22 @@ public class UIControl : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("UI Started");
         GameObject.Find("Button_Right").GetComponent<Button>().onClick.AddListener(RightTurn);
         GameObject.Find("Button_Left").GetComponent<Button>().onClick.AddListener(LeftTurn);
-        GameObject.Find("Button_Top").GetComponent<Button>().onClick.AddListener(LookUp);
-        GameObject.Find("Button_Down").GetComponent<Button>().onClick.AddListener(LookDown);
+        if (GameObject.Find("Button_Top"))
+        {
+            GameObject.Find("Button_Top").GetComponent<Button>().onClick.AddListener(LookUp);
+        }
+        if (GameObject.Find("Button_Down"))
+        {
+            GameObject.Find("Button_Down").GetComponent<Button>().onClick.AddListener(LookDown);
+        }
     }
 
-    private void RightTurn()
+    public void RightTurn()
     {
+        TimeoutClick();
         Sequence seq = DOTween.Sequence();
 
         if (direction == "up" || direction == "down")
@@ -34,6 +42,7 @@ public class UIControl : MonoBehaviour
             return;
         }
 
+        Debug.Log(direction);
         if (direction == "north")
         {
             seq.Append(Camera.main.transform.DOMove(east.position, 0.75f));
@@ -62,6 +71,8 @@ public class UIControl : MonoBehaviour
 
             direction = "north";
         }
+
+        Invoke("TimeinClick", 0.75f);
     }
 
     private void LeftTurn()
@@ -101,6 +112,8 @@ public class UIControl : MonoBehaviour
 
             direction = "north";
         }
+
+        Invoke("TimeinClick", 0.5f);
     }
 
     private void LookUp()
@@ -146,6 +159,36 @@ public class UIControl : MonoBehaviour
 
                 direction = "north";
             }
+        }
+    }
+
+    private void TimeoutClick()
+    {
+        GameObject.Find("Button_Right").GetComponent<Button>().interactable = false;
+        GameObject.Find("Button_Left").GetComponent<Button>().interactable = false;
+
+        if (GameObject.Find("Button_Top"))
+        {
+            GameObject.Find("Button_Top").GetComponent<Button>().interactable = false;
+        }
+        if (GameObject.Find("Button_Down"))
+        {
+            GameObject.Find("Button_Down").GetComponent<Button>().interactable = false;
+        }
+    }
+
+    private void TimeinClick()
+    {
+        GameObject.Find("Button_Right").GetComponent<Button>().interactable = true;
+        GameObject.Find("Button_Left").GetComponent<Button>().interactable = true;
+
+        if (GameObject.Find("Button_Top"))
+        {
+            GameObject.Find("Button_Top").GetComponent<Button>().interactable = true;
+        }
+        if (GameObject.Find("Button_Down"))
+        {
+            GameObject.Find("Button_Down").GetComponent<Button>().interactable = true;
         }
     }
 }
