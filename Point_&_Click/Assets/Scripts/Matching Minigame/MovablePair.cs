@@ -10,7 +10,7 @@ public class MovablePair : MonoBehaviour
     private bool connected;
 
     private const string portTag = "Port";
-    private const float dragResponseThreshold = 1f;
+    private const float dragResponseThreshold = 0.5f;
 
     void OnMouseDrag() {
       Vector3 ScreenPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraZDistance);
