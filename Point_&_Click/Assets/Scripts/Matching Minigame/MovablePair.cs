@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovablePair : MonoBehaviour
 {
-    private Camera mainCamera;
+    [SerializeField] Camera mainCamera;
     private float cameraZDistance;
     private Vector3 initialPosition;
     private bool connected;
@@ -52,7 +52,7 @@ public class MovablePair : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      mainCamera = Camera.main;
+      //mainCamera = Camera.main;
       cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
     }
 
