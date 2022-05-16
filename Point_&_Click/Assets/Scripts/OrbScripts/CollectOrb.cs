@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectOrb : MonoBehaviour
 {
     public Item myItem;
+    public GameObject orb;
 
     [HideInInspector]
     public Collider orbCol;
@@ -18,7 +19,11 @@ public class CollectOrb : MonoBehaviour
 
     public virtual void OnMouseDown()
     {
-            Interact();
+        GameManager.ins.itemsHeld.Add(myItem);
+        GameManager.ins.invDisp.UpdateDisplay();
+        orb.SetActive(false);
+        // Destroy(orb);
+        // Interact();
     }
 
     public void Interact()
