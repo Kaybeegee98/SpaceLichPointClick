@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TutorialProp : Prop
 {
-    public CollectOrb collectOrb;
+    public TutorialOrb collectOrb;
     public override void Arrive()
     {
         base.Arrive();
 
-        //collectOrb.activated = true;
+        collectOrb.activated = true;
     }
     public override void Leave()
     {
@@ -17,7 +17,7 @@ public class TutorialProp : Prop
 
         if (GameObject.FindGameObjectWithTag("Orb"))
         {
-            //collectOrb.activated = false;
+            collectOrb.activated = false;
         }
     }
 }

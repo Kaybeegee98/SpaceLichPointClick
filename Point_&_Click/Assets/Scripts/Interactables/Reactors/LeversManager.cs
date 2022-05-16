@@ -21,7 +21,10 @@ public class LeversManager : MonoBehaviour
             lever3.TurnOff();
             lever4.TurnOff();
 
-            sphere.position = Vector3.MoveTowards(sphere.position, endPoint.position, Time.deltaTime);
+            if (sphere != null)
+            {
+                sphere.position = Vector3.MoveTowards(sphere.position, endPoint.position, Time.deltaTime);
+            }
         }
     }
 }
