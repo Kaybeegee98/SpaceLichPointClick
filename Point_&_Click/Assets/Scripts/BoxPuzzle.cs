@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoxPuzzle : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject orbFive;
 
     public GameObject boxLid;
+    public Image image;
+
 
     void Start()
     {
@@ -25,6 +28,7 @@ public class BoxPuzzle : MonoBehaviour
         orbThree.SetActive(false);
         orbFour.SetActive(false);
         orbFive.SetActive(false);
+        image.enabled = false;
     }
 
     void Update()
@@ -34,6 +38,8 @@ public class BoxPuzzle : MonoBehaviour
         if (orbOne.activeSelf && orbTwo.activeSelf && orbThree.activeSelf && orbFour.activeSelf && orbFive.activeSelf)
         {
             boxLid.SetActive(false);
+            //maybe on mouse down on box
+            image.enabled = true;
         }
     }
 }
