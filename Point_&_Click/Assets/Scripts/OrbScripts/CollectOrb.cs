@@ -16,7 +16,7 @@ public class CollectOrb : MonoBehaviour
         orbCol = GetComponent<Collider>();
     }
 
-    public void OnMouseDown()
+    public virtual void OnMouseDown()
     {
             Interact();
     }

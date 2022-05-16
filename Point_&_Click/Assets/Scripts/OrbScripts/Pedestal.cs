@@ -33,5 +33,6 @@ public class Pedestal : MonoBehaviour
         GameManager.ins.invDisp.UpdateDisplay();
 
         orb.SetActive(true);
+        completed = true;
     }
 }
