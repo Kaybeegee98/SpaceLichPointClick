@@ -20,7 +20,9 @@ public class PentaOrbs : MonoBehaviour
 
     void OnMouseDown()
     {
-        orb.SetActive(true);
+        GameManager.ins.itemsHeld.RemoveAt(GameManager.ins.itemsHeld.Count - 1);
+        GameManager.ins.invDisp.UpdateDisplay();
 
+        orb.SetActive(true);
     }   
 }

@@ -21,7 +21,8 @@ public class CollectOrb : MonoBehaviour
     {
         GameManager.ins.itemsHeld.Add(myItem);
         GameManager.ins.invDisp.UpdateDisplay();
-        Destroy(orb);
+        orb.SetActive(false);
+        // Destroy(orb);
         // Interact();
     }
 
