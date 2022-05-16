@@ -21,5 +21,6 @@ public class PentaOrbs : MonoBehaviour
     void OnMouseDown()
     {
         orb.SetActive(true);
+
     }   
 }
