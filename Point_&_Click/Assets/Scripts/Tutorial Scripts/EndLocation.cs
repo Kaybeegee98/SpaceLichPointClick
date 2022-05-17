@@ -5,8 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class EndLocation : Location
 {
+    public LevelChanger levelChange;
     public override void Arrive()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        base.Arrive();
+        Invoke("TutorialOver", 1f);
+    }
+
+    public void TutorialOver()
+    {
+        levelChange.FadetoLevel();     
     }
 }
