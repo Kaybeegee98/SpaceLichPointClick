@@ -77,6 +77,7 @@ public class UIControl : MonoBehaviour
 
     private void LeftTurn()
     {
+        TimeoutClick();
         Sequence seq = DOTween.Sequence();
 
         if (direction == "up" || direction == "down")
@@ -118,6 +119,7 @@ public class UIControl : MonoBehaviour
 
     private void LookUp()
     {
+        TimeoutClick();
         Sequence seq = DOTween.Sequence();
 
         if (direction != "up")
@@ -137,10 +139,12 @@ public class UIControl : MonoBehaviour
                 direction = "north";
             }
         }
+        Invoke("TimeinClick", 0.5f);
     }
 
     private void LookDown()
     {
+        TimeoutClick();
         Sequence seq = DOTween.Sequence();
 
         if (direction != "down")
@@ -160,6 +164,7 @@ public class UIControl : MonoBehaviour
                 direction = "north";
             }
         }
+        Invoke("TimeinClick", 0.5f);
     }
 
     private void TimeoutClick()
