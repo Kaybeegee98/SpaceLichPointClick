@@ -7,6 +7,7 @@ public class fishing_minigame : MonoBehaviour
     public GameObject orb;
     public GameObject dullOrb;
     public bool complete;
+    public Location local;
 
     [Header("Fishing Area")]
     [SerializeField] Transform topBounds;
@@ -74,7 +75,10 @@ public class fishing_minigame : MonoBehaviour
 
     private void MoveHook() {
         if (Input.GetMouseButton(0)) {
-            hookPullVelocity += hookSpeed * Time.deltaTime;
+            if (local == GameManager.ins.currentNode.GetComponent<Location>())
+            {
+                hookPullVelocity += hookSpeed * Time.deltaTime;
+            }
         }
         hookPullVelocity -= hookGravity * Time.deltaTime;
 
