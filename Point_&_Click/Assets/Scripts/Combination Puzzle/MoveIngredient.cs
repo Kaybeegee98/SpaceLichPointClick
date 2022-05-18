@@ -27,9 +27,9 @@ public class MoveIngredient : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(potTag))
+        if (other.gameObject.tag == "Pot")
         {
-            ingredient.SetActive(false);
+            ingredient.gameObject.SetActive(false);
             Debug.Log("Object Entered");
             //potionMaterial.material.color
         }
