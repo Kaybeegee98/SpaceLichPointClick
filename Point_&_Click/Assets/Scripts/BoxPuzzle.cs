@@ -20,6 +20,10 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject boxLid;
     public Image image;
 
+    public GameObject wall;
+    public GameObject border;
+    public GameObject door;
+
 
     void Start()
     {
@@ -40,6 +44,9 @@ public class BoxPuzzle : MonoBehaviour
             boxLid.SetActive(false);
             //maybe on mouse down on box
             image.enabled = true;
+            wall.SetActive(false);
+            border.SetActive(true);
+            door.SetActive(true);
         }
     }
 }
