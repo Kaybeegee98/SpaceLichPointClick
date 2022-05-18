@@ -7329,6 +7329,7 @@ MonoBehaviour:
   orb: {fileID: 616884148}
   dullOrb: {fileID: 1161063115}
   complete: 0
+  local: {fileID: 10036679}
   topBounds: {fileID: 1478504261}
   bottomBounds: {fileID: 741298836}
   fish: {fileID: 597019247}
@@ -10258,6 +10259,9 @@ MonoBehaviour:
   - {fileID: 1055606579}
   - {fileID: 180578903}
   - {fileID: 902950075}
+  - {fileID: 1164172166}
+  - {fileID: 10036679}
+  - {fileID: 598775483}
   col: {fileID: 0}
   uiControl: {fileID: 1684672152}
 --- !u!1 &1021191393
