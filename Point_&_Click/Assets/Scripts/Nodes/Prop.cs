@@ -23,10 +23,12 @@ public class Prop : Node
 
         if (interact != null)
         {
+            if (GetComponent<Prerequisite>() && !GetComponent<Prerequisite>().Complete)
             {
-                col.enabled = true;
-                interact.enabled = true;
+                return;
             }
+            col.enabled = true;
+            interact.enabled = true;
         }
     }
 
