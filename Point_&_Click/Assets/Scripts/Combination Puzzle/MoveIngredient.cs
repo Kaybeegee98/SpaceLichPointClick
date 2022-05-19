@@ -5,17 +5,16 @@ using UnityEngine;
 public class MoveIngredient : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-    [SerializeField] GameObject ingredient;
     private float cameraZDistance;
-    private const string potTag = "Pot";
+    //private const string potTag = "Pot";
     private int colorChangeAmount = 85;
-    private Renderer potionMaterial;
+    //private Renderer potionMaterial;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject potion = GameObject.Find("Pot");
+        //GameObject potion = GameObject.Find("Pot");
         cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
-        potionMaterial = potion.GetComponent<Renderer>();
+        //potionMaterial = potion.GetComponent<Renderer>();
     }
 
     void OnMouseDrag()
@@ -29,7 +28,7 @@ public class MoveIngredient : MonoBehaviour
     {
         if (other.gameObject.tag == "Pot")
         {
-            ingredient.gameObject.SetActive(false);
+            gameObject.SetActive(false);
             Debug.Log("Object Entered");
             //potionMaterial.material.color
         }
