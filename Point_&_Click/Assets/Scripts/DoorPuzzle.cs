@@ -27,7 +27,7 @@ public class DoorPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        keyClicked = GetComponent<KeyClicked>().value;
+        // keyClicked = GetComponent<KeyClicked>().value;
         if (keyClicked == "e") {
             Debug.Log("yay");
         }

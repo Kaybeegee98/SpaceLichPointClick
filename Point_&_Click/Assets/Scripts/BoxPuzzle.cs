@@ -17,6 +17,12 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject orbFour;
     public GameObject orbFive;
 
+    public GameObject orbOneDull;
+    public GameObject orbTwoDull;
+    public GameObject orbThreeDull;
+    public GameObject orbFourDull;
+    public GameObject orbFiveDull;
+
     public GameObject boxLid;
     public Image image;
 
@@ -47,6 +53,18 @@ public class BoxPuzzle : MonoBehaviour
             wall.SetActive(false);
             border.SetActive(true);
             door.SetActive(true);
+
+            orbOne.SetActive(false);
+            orbTwo.SetActive(false);
+            orbThree.SetActive(false);
+            orbFour.SetActive(false);
+            orbFive.SetActive(false);
+
+            orbOneDull.SetActive(true);
+            orbTwoDull.SetActive(true);
+            orbThreeDull.SetActive(true);
+            orbFourDull.SetActive(true);
+            orbFiveDull.SetActive(true);
         }
     }
 }
