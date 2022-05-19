@@ -5,6 +5,7 @@ using UnityEngine;
 public class RuneScript : MonoBehaviour
 {
     public GameObject orb;
+    public GameObject orbDull;
     public GameObject rune;
 
     // Start is called before the first frame update
@@ -19,7 +20,10 @@ public class RuneScript : MonoBehaviour
         if (orb.activeSelf) {
             rune.SetActive(false);
         }
-        if (!orb.activeSelf) {
+        if (!orb.activeSelf && orbDull.activeSelf) {
+            rune.SetActive(false);
+        }
+        if (!orb.activeSelf && !orbDull.activeSelf) {
             rune.SetActive(true);
         }
     }
