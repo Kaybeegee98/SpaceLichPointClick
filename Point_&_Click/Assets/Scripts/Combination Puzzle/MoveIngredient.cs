@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MoveIngredient : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
-    [SerializeField] GameObject ingredient;
+    [SerializeField] GameObject couldron;
+    [SerializeField] private CombinationManager manager;
     private float cameraZDistance;
-    private const string potTag = "Pot";
-    private int colorChangeAmount = 85;
+    private float colorChangeAmount;
     private Renderer potionMaterial;
+    private Color color;
+    private Vector3 initialPosition;
+    private float numberOfObjects;
+    private List<GameObject> objectsList;
+    private int currentArrayIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject potion = GameObject.Find("Pot");
         cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
-        potionMaterial = potion.GetComponent<Renderer>();
+        potionMaterial = couldron.GetComponent<Renderer>();
+        numberOfObjects = manager.ingredientObjects.Count;
+        objectsList = manager.ingredientObjects;
+        colorChangeAmount = (1 / numberOfObjects);
+        initialPosition = transform.position;
     }
 
     void OnMouseDrag()
@@ -29,9 +38,20 @@ public class MoveIngredient : MonoBehaviour
     {
         if (other.gameObject.tag == "Pot")
         {
-            ingredient.gameObject.SetActive(false);
-            Debug.Log("Object Entered");
-            //potionMaterial.material.color
+            currentArrayIndex = manager.getArrayIndex();
+            if (gameObject.name == objectsList[currentArrayIndex].name)
+            {
+                gameObject.SetActive(false);
+                color = potionMaterial.material.color;
+                color.a += colorChangeAmount;
+                potionMaterial.material.color = color;
+                currentArrayIndex += 1;
+                manager.setArrayIndex(currentArrayIndex);
+            }
+            else
+            {
+                manager.ResetPositions();
+            }
         }
     }
 
