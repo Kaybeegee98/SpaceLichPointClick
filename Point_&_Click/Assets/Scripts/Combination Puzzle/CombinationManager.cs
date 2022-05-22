@@ -28,7 +28,7 @@ public class CombinationManager : MonoBehaviour
     {
         for (int i = 0; i < ingredientObjects.Count; i++)
         {
-            initialPositions[i] = ingredientObjects[i].transform.localPosition;
+            initialPositions[i] = ingredientObjects[i].transform.position;
         }
     }
 
@@ -36,7 +36,8 @@ public class CombinationManager : MonoBehaviour
     {
         for (int i = 0; i < ingredientObjects.Count; i++) {
             ingredientObjects[i].SetActive(true);
-            ingredientObjects[i].transform.localPosition = initialPositions[i];
+            ingredientObjects[i].transform.position = initialPositions[i];
         }
+        arrayIndex = 0;
     }
 }
