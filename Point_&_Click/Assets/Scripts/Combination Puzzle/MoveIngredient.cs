@@ -12,11 +12,10 @@ public class MoveIngredient : MonoBehaviour
     private float colorChangeAmount;
     private Renderer potionMaterial;
     private Color color;
-    private Vector3 initialPosition;
     private float numberOfObjects;
     private List<GameObject> objectsList;
     private int currentArrayIndex = 0;
-    // Start is called before the first frame update
+   
     void Start()
     {
         cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
@@ -24,7 +23,7 @@ public class MoveIngredient : MonoBehaviour
         numberOfObjects = manager.ingredientObjects.Count;
         objectsList = manager.ingredientObjects;
         colorChangeAmount = (1 / numberOfObjects);
-        initialPosition = transform.position;
+        //initialPosition = transform.position;
     }
 
     void OnMouseDrag()
@@ -39,6 +38,7 @@ public class MoveIngredient : MonoBehaviour
         if (other.gameObject.tag == "Pot")
         {
             currentArrayIndex = manager.getArrayIndex();
+            Debug.Log(currentArrayIndex);
             if (gameObject.name == objectsList[currentArrayIndex].name)
             {
                 gameObject.SetActive(false);
@@ -51,6 +51,8 @@ public class MoveIngredient : MonoBehaviour
             else
             {
                 manager.ResetPositions();
+                currentArrayIndex = 0;
+                manager.setArrayIndex(currentArrayIndex);
             }
         }
     }

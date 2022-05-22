@@ -9,6 +9,7 @@ public class CombinationManager : MonoBehaviour
     private int arrayIndex;
     private List<Vector3> initialPositions;
 
+
     void Start()
     {
         setInitialPositions();
@@ -24,20 +25,20 @@ public class CombinationManager : MonoBehaviour
         return arrayIndex;
     }
 
-    private void setInitialPositions()
+    public void setInitialPositions()
     {
         for (int i = 0; i < ingredientObjects.Count; i++)
         {
-            initialPositions[i] = ingredientObjects[i].transform.position;
+            initialPositions[i] = ingredientObjects[i].transform.localPosition;
         }
     }
 
     public void ResetPositions()
     {
-        for (int i = 0; i < ingredientObjects.Count; i++) {
+        for (int i = 0; i < ingredientObjects.Count; i++)
+        {
             ingredientObjects[i].SetActive(true);
-            ingredientObjects[i].transform.position = initialPositions[i];
+            ingredientObjects[i].transform.localPosition = initialPositions[i];
         }
-        arrayIndex = 0;
     }
 }
