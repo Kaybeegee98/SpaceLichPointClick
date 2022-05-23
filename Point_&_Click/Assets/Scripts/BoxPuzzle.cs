@@ -29,6 +29,7 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject wall;
     public GameObject border;
     public GameObject door;
+    public GameObject keyboard;
 
 
     void Start()
@@ -53,6 +54,7 @@ public class BoxPuzzle : MonoBehaviour
             wall.SetActive(false);
             border.SetActive(true);
             door.SetActive(true);
+            keyboard.SetActive(true);
 
             orbOne.SetActive(false);
             orbTwo.SetActive(false);
