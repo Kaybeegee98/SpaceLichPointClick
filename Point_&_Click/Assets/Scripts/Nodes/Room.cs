@@ -58,6 +58,11 @@ public class Room : Node
             col.enabled = false;
         }
 
+        if (footstep != null)
+        {
+            footstep.Play();
+        }
+
         SetReachableNodes(true);
     }
 

@@ -27,7 +27,7 @@ public class DoorPuzzle : MonoBehaviour
         //     else if (counter == 1 && key == "keyX") { 
         //         Debug.Log(counter);
         //         counter++;
-        //     }
+        //     
         //     // else {
         //     //     Debug.Log("reset");
         //     //     counter = 0;

@@ -8,6 +8,7 @@ public abstract class Node : MonoBehaviour
 
     public Transform cameraPosition;
     public List<Node> reachableNodes = new List<Node>();
+    public AudioSource footstep;
 
     [HideInInspector]
     public Collider col;
@@ -39,6 +40,11 @@ public abstract class Node : MonoBehaviour
         if (col != null)
         {
             col.enabled = false;
+        }
+
+        if (footstep != null)
+        {
+            footstep.Play();
         }
 
         SetReachableNodes(true);

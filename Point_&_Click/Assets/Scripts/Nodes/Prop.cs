@@ -30,6 +30,11 @@ public class Prop : Node
             col.enabled = true;
             interact.enabled = true;
         }
+
+        if (footstep != null)
+        {
+            footstep.Play();
+        }
     }
 
     public override void Leave()

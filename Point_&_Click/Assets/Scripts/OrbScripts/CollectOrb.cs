@@ -6,6 +6,7 @@ public class CollectOrb : MonoBehaviour
 {
     public Item myItem;
     public GameObject orb;
+    public AudioSource pickup;
 
     [HideInInspector]
     public Collider orbCol;
@@ -19,20 +20,18 @@ public class CollectOrb : MonoBehaviour
 
     public virtual void OnMouseDown()
     {
-        GameManager.ins.itemsHeld.Add(myItem);
-        GameManager.ins.invDisp.UpdateDisplay();
+        Interact();
         orb.SetActive(false);
-        // Destroy(orb);
-        // Interact();
     }
 
     public void Interact()
     {
         GameManager.ins.itemsHeld.Add(myItem);
         GameManager.ins.invDisp.UpdateDisplay();
-        if (GameObject.FindGameObjectWithTag("Orb"))
+
+        if (pickup != null)
         {
-            Destroy(GameObject.FindGameObjectWithTag("Orb"));
+            pickup.Play();
         }
     }
 }
