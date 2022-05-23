@@ -24,7 +24,7 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject orbFiveDull;
 
     public GameObject boxLid;
-    public Image image;
+    // public Image image;
 
     public GameObject wall;
     public GameObject border;
@@ -39,7 +39,7 @@ public class BoxPuzzle : MonoBehaviour
         orbThree.SetActive(false);
         orbFour.SetActive(false);
         orbFive.SetActive(false);
-        image.enabled = false;
+        // image.enabled = false;
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class BoxPuzzle : MonoBehaviour
         {
             boxLid.SetActive(false);
             //maybe on mouse down on box
-            image.enabled = true;
+            // image.enabled = true;
             wall.SetActive(false);
             border.SetActive(true);
             door.SetActive(true);
