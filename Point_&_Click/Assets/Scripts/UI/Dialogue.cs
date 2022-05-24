@@ -10,6 +10,8 @@ public class Dialogue : MonoBehaviour
     public Text textBox;
     public static bool doorOpen;
     public bool lichSealed;
+    public bool doorOpened = false;
+    public GameObject panel;
 
 
     // Start is called before the first frame update
@@ -24,12 +26,18 @@ public class Dialogue : MonoBehaviour
     {
         doorOpen = DoorPuzzle.doorOpen;
 
-        if (doorOpen) {
-            Debug.Log("update display running door open");
-            dialogueText = "Turn back...";
-            textBox.text = dialogueText;
+        if (doorOpen && !doorOpened) {
+            // Debug.Log("update display running door open");
+            // dialogueText = "typerwriter test back...";
+            // GetComponent<Typewriter>().Run(dialogueText, textBox);
+            StartCoroutine(firstDialogue());
+            doorOpened = true;
         }
     }
+
+
+
+
 
     // Update is called once per frame
     public void UpdateDisplay()
@@ -37,8 +45,8 @@ public class Dialogue : MonoBehaviour
         Debug.Log("update display running");
         dialogueText = "Turn back...";
         textBox.text = dialogueText;
-        // dialogueText = "typerwriter test back...";
-        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        dialogueText = "typerwriter test back...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
         Debug.Log("second update display running");
         // 
 
@@ -67,27 +75,42 @@ public class Dialogue : MonoBehaviour
     // }
 
     private IEnumerator firstDialogue() {
-        dialogueText = "Turn back...";
-        textBox.text = dialogueText;
-        yield return new WaitForSeconds(2);
-        
-        
-        // textBox.color = Color.green;
         // dialogueText = "Turn back...";
+        // textBox.text = dialogueText;
+        // Debug.Log("update display running door open");
+        // dialogueText = "typerwriter test back...";
         // GetComponent<Typewriter>().Run(dialogueText, textBox);
         // yield return new WaitForSeconds(2);
-        // dialogueText = "You will regret this";
-        // dialogueText = "End will come to your species";
-        // dialogueText = "All is not as it seems...";
+        
+        panel.SetActive(true);
+        
+        // textBox.color = Color.white;
+        dialogueText = "Xelmoroch:  Turn back...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(4);
+        dialogueText = "Xelmoroch:  You will regret this.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(6);
+        dialogueText = "Xelmoroch:  End will come to your species.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(8);
+        dialogueText = "Xelmoroch:  All is not as it seems...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(8);
 
-        // textBox.color = Color.magenta;
-        // dialogueText = "Do not believe his threats, he is not strong enough yet";
+        dialogueText = "Unknown:  Do not believe his threats, he is not strong enough yet.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(13);
 
-        // textBox.color = Color.green;
-        // dialogueText = "Turn Ba...";
-
-        // textBox.color = Color.magenta;
-        // dialogueText = "Silence Lich!";
-        // dialogueText = "You may proceed.";
+        dialogueText = "Xelmoroch:  Turn ba...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(3);
+ 
+        dialogueText = "Unknown:  Silence Lich!";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(3);
+        dialogueText = "Unknown:  You may proceed.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(4);
     }
 }

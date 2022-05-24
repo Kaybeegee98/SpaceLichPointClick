@@ -6,7 +6,7 @@ using TMPro;
 
 public class Typewriter : MonoBehaviour
 {
-    [SerializeField] private float typewriterSpeed = 10f;
+    [SerializeField] private float typewriterSpeed = 8f;
 
     public void Run(string textToType, Text textLabel) {
         StartCoroutine(TypeText(textToType, textLabel));
@@ -24,7 +24,7 @@ public class Typewriter : MonoBehaviour
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
             textLabel.text = textToType.Substring(0, charIndex);
-            Debug.Log(textToType);
+
             yield return null;
         }
 
