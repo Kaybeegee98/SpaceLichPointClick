@@ -8,4 +8,7 @@ public class StartGameButton : MonoBehaviour
     public void GoToScene() {
         SceneManager.LoadScene("Tutorial_Scene");
     }
+    public void ExitGame() {
+        Application.Quit();
+    }
 }
