@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class BoxPuzzle : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject barsGreen;
     public GameObject barsPurple;
     public GameObject progressBar;
+
+    public UIControl uiControl;
 
     [HideInInspector]
     public bool activated = false;
@@ -78,7 +81,10 @@ public class BoxPuzzle : MonoBehaviour
             orbThreeDull.SetActive(true);
             orbFourDull.SetActive(true);
             orbFiveDull.SetActive(true);
+
             activated = true;
+
+            this.GetComponent<Location>().Arrive();
         }
     }
 }

@@ -793,6 +793,7 @@ MonoBehaviour:
   barsGreen: {fileID: 234372271}
   barsPurple: {fileID: 420170204}
   progressBar: {fileID: 442904396}
+  uiControl: {fileID: 0}
   activated: 0
 --- !u!114 &37944992
 MonoBehaviour:
@@ -6464,6 +6465,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3428698, y: 0.2134, z: 0.2134}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2129822502}
   m_RootOrder: 0
@@ -19330,8 +19332,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.00006515912, y: 0.9997947, z: -0.01981236, w: 0.004244109}
-  m_LocalPosition: {x: 0.047780603, y: 3.1156156, z: -26.005999}
+  m_LocalRotation: {x: -0.1852022, y: 0.018268222, z: -0.0034541797, w: -0.9825246}
+  m_LocalPosition: {x: -0.054492652, y: 2.8264034, z: -4.1858253}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20581,6 +20583,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.29564977, y: 0.50675833, z: 0.2134}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2129822502}
   m_RootOrder: 3
@@ -26488,7 +26491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1307226946
 AudioListener:
   m_ObjectHideFlags: 0
@@ -34197,6 +34200,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2129822502}
   m_RootOrder: 2
@@ -34260,8 +34264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6303494d45952a41ba7ef35e141067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
-  textLabel: {fileID: 0}
+  dialogueText: 
+  textBox: {fileID: 0}
+  doorOpen: 0
+  lichSealed: 0
 --- !u!114 &1685284404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34274,8 +34280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6303494d45952a41ba7ef35e141067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
-  textLabel: {fileID: 0}
+  dialogueText: 
+  textBox: {fileID: 0}
+  doorOpen: 0
+  lichSealed: 0
 --- !u!114 &1685284405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34288,6 +34296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c260c6b217ecb8b45ad28a676442db62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typewriterSpeed: 10
 --- !u!1 &1698121855
 GameObject:
   m_ObjectHideFlags: 0
