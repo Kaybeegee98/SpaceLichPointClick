@@ -35,6 +35,9 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject barsPurple;
     public GameObject progressBar;
 
+    [HideInInspector]
+    public bool activated = false;
+
 
     void Start()
     {
@@ -48,9 +51,9 @@ public class BoxPuzzle : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(GameManager.ins.itemsHeld.Count);
+        //Debug.Log(GameManager.ins.itemsHeld.Count);
 
-        if (orbOne.activeSelf && orbTwo.activeSelf && orbThree.activeSelf && orbFour.activeSelf && orbFive.activeSelf)
+        if ((orbOne.activeSelf && orbTwo.activeSelf && orbThree.activeSelf && orbFour.activeSelf && orbFive.activeSelf) && activated == false)
         {
             boxLid.SetActive(false);
             //maybe on mouse down on box
@@ -75,6 +78,7 @@ public class BoxPuzzle : MonoBehaviour
             orbThreeDull.SetActive(true);
             orbFourDull.SetActive(true);
             orbFiveDull.SetActive(true);
+            activated = true;
         }
     }
 }
