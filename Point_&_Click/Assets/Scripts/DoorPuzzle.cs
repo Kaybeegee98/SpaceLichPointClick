@@ -52,8 +52,6 @@ public class DoorPuzzle : MonoBehaviour
     }
 
     void CheckKey() {
-
-
         if (key == "keyE") { 
             counter = 1;
             Vector3 progressBarScale = progressBarContainer.localScale;
@@ -109,8 +107,9 @@ public class DoorPuzzle : MonoBehaviour
             progressBarScale.y = 0;
             progressBarContainer.localScale = progressBarScale;
         }
-        Debug.Log(counter);
+        // Debug.Log(counter);
         // clickedKey.SetActive(false);
         // Debug.Log(counter + "counter");
+        
     }
 }

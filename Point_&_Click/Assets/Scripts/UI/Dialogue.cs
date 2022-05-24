@@ -17,16 +17,23 @@ public class Dialogue : MonoBehaviour
     {
         // GetComponent<Typewriter>().Run("typewriter test", textBox);
         // dialogueText.text = "Test\n second line";
-        doorOpen = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void UpdateDisplay()
     {
+        // dialogueText = "Turn back...";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+
         doorOpen = DoorPuzzle.doorOpen;
-        if (!doorOpen) {
-            textBox.text = "yay";
+        Debug.Log(doorOpen);
+        if (doorOpen) {
+            // dialogueText = "Turn back...";
+            // GetComponent<Typewriter>().Run(dialogueText, textBox);
             firstDialogue();
+            // dialogueText = "Turn back...";
+            // GetComponent<Typewriter>().Run(dialogueText, textBox);
+            // yield return new WaitForSeconds(2);
         }
         
         // if (lichSealed) {
@@ -37,28 +44,35 @@ public class Dialogue : MonoBehaviour
         //     dialogueText = "Preparing for the invasion of your world";
         //     dialogueText = "Mankind’s end is imminent";
         // }
-
-
     }
 
+    // public void StartDialogue() {
+    //     dialogueText = "Turn back...";
+    //     textBox.text = dialogueText;
+    // }
 
     private IEnumerator firstDialogue() {
-        textBox.color = Color.green;
         dialogueText = "Turn back...";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        textBox.text = dialogueText;
         yield return new WaitForSeconds(2);
-        dialogueText = "You will regret this";
-        dialogueText = "End will come to your species";
-        dialogueText = "All is not as it seems...";
+        
+        
+        // textBox.color = Color.green;
+        // dialogueText = "Turn back...";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // yield return new WaitForSeconds(2);
+        // dialogueText = "You will regret this";
+        // dialogueText = "End will come to your species";
+        // dialogueText = "All is not as it seems...";
 
-        textBox.color = Color.magenta;
-        dialogueText = "Do not believe his threats, he is not strong enough yet";
+        // textBox.color = Color.magenta;
+        // dialogueText = "Do not believe his threats, he is not strong enough yet";
 
-        textBox.color = Color.green;
-        dialogueText = "Turn Ba...";
+        // textBox.color = Color.green;
+        // dialogueText = "Turn Ba...";
 
-        textBox.color = Color.magenta;
-        dialogueText = "Silence Lich!";
-        dialogueText = "You may proceed.";
+        // textBox.color = Color.magenta;
+        // dialogueText = "Silence Lich!";
+        // dialogueText = "You may proceed.";
     }
 }
