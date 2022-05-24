@@ -35,17 +35,29 @@ public class fishing_minigame : MonoBehaviour
     [SerializeField] float hookPower;
     [SerializeField] float progressBarDecay;
     float catchProgress;
+
+    bool checkpoint;
     
     private void Start() {
         catchProgress = 0;
         complete = false;
+        checkpoint = false;
     }
 
     private void FixedUpdate() {
         MoveFish();
         MoveHook();
         CheckProgress();
+        // ProgressCheckpoint();
     }
+
+    // private void ProgressCheckpoint() {
+    //     if (catchProgress >= 0.5f) {
+    //         if (catchProgress < 0.5f) {
+    //             catchProgress = 0.5f;
+    //         }
+    //     }
+    // }
 
     private void CheckProgress() {
         Vector3 progressBarScale = progressBarContainer.localScale;
@@ -57,17 +69,28 @@ public class fishing_minigame : MonoBehaviour
         if (!complete) {
             if (min < fishPosition && fishPosition < max) {
                 catchProgress += hookPower * Time.deltaTime;
+                if (catchProgress >= 0.5f) {
+                    checkpoint = true;
+                }
                 if (catchProgress >= 1) {
-                    Debug.Log("you win!!!! fishy");
+                    // Debug.Log("you win!!!! fishy");
                     orb.transform.Translate(-1, 0, 0);
                     dullOrb.transform.Translate(1, 0, 0);
                     complete = true;
                 }
             } else {
-                catchProgress -= progressBarDecay * Time.deltaTime;
-                if (catchProgress <= 0) {
-                    //Debug.Log("you lose!!!! fishy");
+                if (checkpoint) {
+                    if (catchProgress > 0.5f) {
+                        catchProgress -= progressBarDecay * Time.deltaTime;
+                    }
                 }
+                else {
+                    catchProgress -= progressBarDecay * Time.deltaTime;
+                    if (catchProgress <= 0) {
+                        //Debug.Log("you lose!!!! fishy");
+                    }
+                }
+
             }
             catchProgress = Mathf.Clamp(catchProgress, 0, 1);
         }
@@ -105,7 +128,4 @@ public class fishing_minigame : MonoBehaviour
         fishPosition = Mathf.SmoothDamp(fishPosition, fishTargetPosition, ref fishSpeed, smoothMotion);
         fish.position = Vector3.Lerp(bottomBounds.position, topBounds.position, fishPosition);
     }
-
-
-
 }
