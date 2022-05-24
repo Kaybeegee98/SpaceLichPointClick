@@ -20,7 +20,7 @@ public class Dialogue : MonoBehaviour
     }
 
     // Update is called once per frame
-    void UpdateDisplay()
+    public void UpdateDisplay()
     {
         dialogueText = "Turn back...";
         textBox.text = dialogueText;
