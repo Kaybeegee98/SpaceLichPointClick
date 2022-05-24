@@ -9,8 +9,9 @@ public class Dialogue : MonoBehaviour
     public string dialogueText;
     public Text textBox;
     public static bool doorOpen;
-    public bool lichSealed;
+    public static bool lichSeal;
     public bool doorOpened = false;
+    public bool lichSealed = false;
     public GameObject panel;
 
 
@@ -25,13 +26,16 @@ public class Dialogue : MonoBehaviour
     void Update() 
     {
         doorOpen = DoorPuzzle.doorOpen;
+        lichSeal = SealLich.lichSealed;
 
         if (doorOpen && !doorOpened) {
-            // Debug.Log("update display running door open");
-            // dialogueText = "typerwriter test back...";
-            // GetComponent<Typewriter>().Run(dialogueText, textBox);
-            StartCoroutine(firstDialogue());
+            StartCoroutine(doorDialogue());
             doorOpened = true;
+        }
+
+        if (lichSealed && !lichSealed) {
+            StartCoroutine(endDialogue());
+            lichSealed = true;
         }
     }
 
@@ -40,77 +44,102 @@ public class Dialogue : MonoBehaviour
 
 
     // Update is called once per frame
-    public void UpdateDisplay()
-    {
-        Debug.Log("update display running");
-        dialogueText = "Turn back...";
-        textBox.text = dialogueText;
-        dialogueText = "typerwriter test back...";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
-        Debug.Log("second update display running");
-        // 
+    // public void UpdateDisplay()
+    // {
+    //     Debug.Log("update display running");
+    //     dialogueText = "Turn back...";
+    //     textBox.text = dialogueText;
+    //     dialogueText = "typerwriter test back...";
+    //     GetComponent<Typewriter>().Run(dialogueText, textBox);
+    //     Debug.Log("second update display running");
+    //     // 
 
-        // if (doorOpen) {
-        //     // dialogueText = "Turn back...";
-        //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
-        //     firstDialogue();
-        //     // dialogueText = "Turn back...";
-        //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
-        //     // yield return new WaitForSeconds(2);
-        // }
+    //     // if (doorOpen) {
+    //     //     // dialogueText = "Turn back...";
+    //     //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
+    //     //     firstDialogue();
+    //     //     // dialogueText = "Turn back...";
+    //     //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
+    //     //     // yield return new WaitForSeconds(2);
+    //     // }
         
-        // if (lichSealed) {
-        //     textBox.color = Color.magenta;
-        //     dialogueText = "Congratulations! you have successfully recaptured Xelmoroch";
-        //     dialogueText = "We cannot thank you enough for aiding us. Now it can begin.";
-        //     dialogueText = "Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
-        //     dialogueText = "Preparing for the invasion of your world";
-        //     dialogueText = "Mankind’s end is imminent";
-        // }
-    }
+    //     // if (lichSealed) {
+            // textBox.color = Color.magenta;
+            // dialogueText = "Congratulations! you have successfully recaptured Xelmoroch";
+            // dialogueText = "We cannot thank you enough for aiding us. Now it can begin.";
+            // dialogueText = "Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
+            // dialogueText = "Preparing for the invasion of your world";
+            // dialogueText = "Mankind’s end is imminent";
+    //     // }
+    // }
 
     // public void StartDialogue() {
     //     dialogueText = "Turn back...";
     //     textBox.text = dialogueText;
     // }
 
-    private IEnumerator firstDialogue() {
-        // dialogueText = "Turn back...";
-        // textBox.text = dialogueText;
-        // Debug.Log("update display running door open");
-        // dialogueText = "typerwriter test back...";
-        // GetComponent<Typewriter>().Run(dialogueText, textBox);
-        // yield return new WaitForSeconds(2);
-        
+    private IEnumerator doorDialogue() {        
         panel.SetActive(true);
         
         // textBox.color = Color.white;
         dialogueText = "Xelmoroch:  Turn back...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(4);
-        dialogueText = "Xelmoroch:  You will regret this.";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(6);
-        dialogueText = "Xelmoroch:  End will come to your species.";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(8);
+        // dialogueText = "Xelmoroch:  You will regret this.";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // yield return new WaitForSeconds(6);
+        // dialogueText = "Xelmoroch:  End will come to your species.";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // yield return new WaitForSeconds(8);
         dialogueText = "Xelmoroch:  All is not as it seems...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(8);
 
-        dialogueText = "Unknown:  Do not believe his threats, he is not strong enough yet.";
+        dialogueText = "Unknown:  Ignore the lich!";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(13);
+        yield return new WaitForSeconds(5);
 
-        dialogueText = "Xelmoroch:  Turn ba...";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(3);
+        // dialogueText = "Xelmoroch:  Turn ba...";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // yield return new WaitForSeconds(3);
  
-        dialogueText = "Unknown:  Silence Lich!";
+        // dialogueText = "Unknown:  Silence Lich!";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // yield return new WaitForSeconds(3);
+        dialogueText = "Unknown:  Move quickly, there is still time to stop him!";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(3);
-        dialogueText = "Unknown:  You may proceed.";
+        yield return new WaitForSeconds(11);
+
+        dialogueText = "";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2);
+
+        panel.SetActive(false);
+    }
+
+    private IEnumerator endDialogue() {        
+        panel.SetActive(true);
+        
+        dialogueText = "Unknown:  Congratulations! You have successfully recaptured Xelmoroch!";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(8);
+        dialogueText = "Unknown:  We cannot thank you enough for aiding us. Now it can begin.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(14);
+        dialogueText = "Unknown:  Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(15);
+        dialogueText = "Unknown:  Preparing for the invasion of your world.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(8);
+        dialogueText = "Unknown:  Mankind's end is imminent.";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(6);
+
+        dialogueText = "";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(2);
+
+        panel.SetActive(false);
     }
 }
