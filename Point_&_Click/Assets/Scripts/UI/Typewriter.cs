@@ -24,7 +24,7 @@ public class Typewriter : MonoBehaviour
             charIndex = Mathf.Clamp(charIndex, 0, textToType.Length);
 
             textLabel.text = textToType.Substring(0, charIndex);
-
+            Debug.Log(textToType);
             yield return null;
         }
 
