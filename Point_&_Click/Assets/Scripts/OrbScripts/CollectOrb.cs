@@ -21,11 +21,11 @@ public class CollectOrb : MonoBehaviour
     public virtual void OnMouseDown()
     {
         Interact();
-        orb.SetActive(false);
     }
 
     public void Interact()
     {
+        orb.SetActive(false);
         GameManager.ins.itemsHeld.Add(myItem);
         GameManager.ins.invDisp.UpdateDisplay();
 

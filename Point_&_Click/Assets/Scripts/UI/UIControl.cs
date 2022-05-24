@@ -32,6 +32,20 @@ public class UIControl : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if ((Camera.main.transform == up.transform) || (Camera.main.transform == down.transform))
+        {
+            GameObject.Find("Button_Right").GetComponent<Button>().interactable = false;
+            GameObject.Find("Button_Left").GetComponent<Button>().interactable = false;
+        }
+        else
+        {
+            GameObject.Find("Button_Right").GetComponent<Button>().interactable = true;
+            GameObject.Find("Button_Left").GetComponent<Button>().interactable = true;
+        }
+    }
+
     public void RightTurn()
     {
         TimeoutClick();
@@ -39,11 +53,8 @@ public class UIControl : MonoBehaviour
 
         if (direction == "up" || direction == "down")
         {
-            return;
         }
-
-        Debug.Log(direction);
-        if (direction == "north")
+        else if (direction == "north")
         {
             seq.Append(Camera.main.transform.DOMove(east.position, 0.75f));
             seq.Join(Camera.main.transform.DORotate(east.rotation.eulerAngles, 0.75f));
@@ -72,6 +83,7 @@ public class UIControl : MonoBehaviour
             direction = "north";
         }
 
+        Debug.Log(direction);
         Invoke("TimeinClick", 0.75f);
     }
 
@@ -82,10 +94,8 @@ public class UIControl : MonoBehaviour
 
         if (direction == "up" || direction == "down")
         {
-            return;
         }
-
-        if (direction == "north")
+        else if (direction == "north")
         {
             seq.Append(Camera.main.transform.DOMove(west.position, 0.75f));
             seq.Join(Camera.main.transform.DORotate(west.rotation.eulerAngles, 0.75f));
@@ -114,6 +124,7 @@ public class UIControl : MonoBehaviour
             direction = "north";
         }
 
+        Debug.Log(direction);
         Invoke("TimeinClick", 0.5f);
     }
 

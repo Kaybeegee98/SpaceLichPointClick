@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Prerequisite : MonoBehaviour
 {
-    public Switcher checkSwitch;
+    public BoxPuzzle checkBox;
     public bool nodeAccess;
     public bool Complete
     { 
-        get { return checkSwitch.state; } 
+        get { return checkBox.activated; } 
     }
 }

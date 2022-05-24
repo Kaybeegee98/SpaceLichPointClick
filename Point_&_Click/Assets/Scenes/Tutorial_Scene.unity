@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1570819934}
+  pickup: {fileID: 1932048800}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!1 &112869724
@@ -2515,7 +2516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myItem:
     itemName: Orb
-  orb: {fileID: 0}
+  orb: {fileID: 781017841}
   pickup: {fileID: 1932048800}
   orbCol: {fileID: 0}
   activated: 0
