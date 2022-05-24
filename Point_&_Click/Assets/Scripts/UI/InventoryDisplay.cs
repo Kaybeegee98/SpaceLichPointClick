@@ -14,6 +14,6 @@ public class InventoryDisplay : MonoBehaviour
 
     public void UpdateDisplay()
     {
-        displayText.text = "Number of Spheres Collected: " + GameManager.ins.itemsHeld.Count;
+        displayText.text = "Number of Orbs Collected: " + GameManager.ins.itemsHeld.Count;
     }
 }

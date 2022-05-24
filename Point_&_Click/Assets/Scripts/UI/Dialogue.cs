@@ -8,8 +8,10 @@ public class Dialogue : MonoBehaviour
 {
     public string dialogueText;
     public Text textBox;
+    public static bool boxOpen;
     public static bool doorOpen;
     public static bool lichSeal;
+    public bool boxOpened = false;
     public bool doorOpened = false;
     public bool lichSealed = false;
     public GameObject panel;
@@ -27,8 +29,14 @@ public class Dialogue : MonoBehaviour
 
     void Update() 
     {
+        boxOpen = BoxPuzzle.boxOpen;
         doorOpen = DoorPuzzle.doorOpen;
         lichSeal = SealLich.lichSealed;
+
+        if (boxOpen && !boxOpened) {
+            StartCoroutine(boxDialogue());
+            boxOpened = true;
+        }
 
         if (doorOpen && !doorOpened) {
             StartCoroutine(doorDialogue());
@@ -79,6 +87,20 @@ public class Dialogue : MonoBehaviour
     //     dialogueText = "Turn back...";
     //     textBox.text = dialogueText;
     // }
+
+private IEnumerator boxDialogue() {        
+        panel.SetActive(true);
+        
+        dialogueText = "Xelmoroch:  Thank you for releasing me...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(5);
+
+        dialogueText = "";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        yield return new WaitForSeconds(2);
+
+        panel.SetActive(false);
+    }
 
     private IEnumerator doorDialogue() {        
         panel.SetActive(true);

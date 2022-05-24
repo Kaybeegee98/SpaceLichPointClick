@@ -36,6 +36,8 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject barsPurple;
     public GameObject progressBar;
 
+    public static bool boxOpen;
+
     public AudioSource rumble;
 
     [HideInInspector]
@@ -51,6 +53,7 @@ public class BoxPuzzle : MonoBehaviour
         orbFour.SetActive(false);
         orbFive.SetActive(false);
         // image.enabled = false;
+        boxOpen = false;
     }
 
     void Update()
@@ -83,6 +86,8 @@ public class BoxPuzzle : MonoBehaviour
             orbFourDull.SetActive(true);
             orbFiveDull.SetActive(true);
 
+            boxOpen = true;
+            
             activated = true;
 
             this.GetComponent<Location>().Arrive();
