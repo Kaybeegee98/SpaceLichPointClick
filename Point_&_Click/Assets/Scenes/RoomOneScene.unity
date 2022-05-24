@@ -781,6 +781,7 @@ MonoBehaviour:
   barsGreen: {fileID: 234372271}
   barsPurple: {fileID: 420170204}
   progressBar: {fileID: 442904396}
+  activated: 0
 --- !u!114 &37944992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8084,6 +8085,84 @@ MonoBehaviour:
   footstep: {fileID: 0}
   col: {fileID: 0}
   loc: {fileID: 902950075}
+--- !u!1001 &472417488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1967837552}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0047
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0032550392
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0047
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.599
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.206
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3275431804185203673, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e9da3649ec857e74a89693de19f63c84, type: 2}
+    - target: {fileID: 919132149155446097, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+      propertyPath: m_Name
+      value: Liquid
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+--- !u!4 &472417489 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 07df79c615bef674aa6433f81b6f5b32, type: 3}
+  m_PrefabInstance: {fileID: 472417488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &472648704 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2891418278457567936, guid: e8c2fea697c503043b24da3f8a2a8e01, type: 3}
@@ -32142,7 +32221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781a7b630d6c8fc428c3eb927d03c1db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkSwitch: {fileID: 1218689418}
+  checkBox: {fileID: 0}
   nodeAccess: 1
 --- !u!114 &1719583970
 MonoBehaviour:
@@ -36629,6 +36708,7 @@ Transform:
   - {fileID: 1802013977}
   - {fileID: 1942642667}
   - {fileID: 479057755}
+  - {fileID: 472417489}
   m_Father: {fileID: 514858701}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
