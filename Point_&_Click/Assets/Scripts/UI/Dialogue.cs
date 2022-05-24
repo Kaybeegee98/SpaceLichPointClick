@@ -20,21 +20,23 @@ public class Dialogue : MonoBehaviour
     }
 
     // Update is called once per frame
-    void UpdateDisplay()
+    public void UpdateDisplay()
     {
-        // dialogueText = "Turn back...";
-        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        dialogueText = "Turn back...";
+        textBox.text = dialogueText;
+        dialogueText = "typerwriter test back...";
+        GetComponent<Typewriter>().Run(dialogueText, textBox);
 
-        doorOpen = DoorPuzzle.doorOpen;
-        Debug.Log(doorOpen);
-        if (doorOpen) {
-            // dialogueText = "Turn back...";
-            // GetComponent<Typewriter>().Run(dialogueText, textBox);
-            firstDialogue();
-            // dialogueText = "Turn back...";
-            // GetComponent<Typewriter>().Run(dialogueText, textBox);
-            // yield return new WaitForSeconds(2);
-        }
+        // doorOpen = DoorPuzzle.doorOpen;
+        // Debug.Log(doorOpen);
+        // if (doorOpen) {
+        //     // dialogueText = "Turn back...";
+        //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        //     firstDialogue();
+        //     // dialogueText = "Turn back...";
+        //     // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        //     // yield return new WaitForSeconds(2);
+        // }
         
         // if (lichSealed) {
         //     textBox.color = Color.magenta;

@@ -20,6 +20,7 @@ public class DullOrbSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(manager.potionComplete);
         if (manager.potionComplete)
         {
             potionDone = true;
