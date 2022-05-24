@@ -2599,7 +2599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172619995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.04, y: -5.59, z: 3.97}
+  m_LocalPosition: {x: 4.22, y: -5.59, z: 3.97}
   m_LocalScale: {x: 1.1876, y: 2.7042, z: 1}
   m_Children:
   - {fileID: 1571647362}
@@ -4396,6 +4396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 180218944}
+  pickup: {fileID: 0}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &287123721
@@ -6041,6 +6042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1865733600}
+  pickup: {fileID: 0}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &460668730
@@ -19903,6 +19905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 797968498}
+  pickup: {fileID: 0}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1323356928
@@ -20719,10 +20722,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fb97b84c2c9d240bc3fc0fa5957ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lever1: {fileID: 1494233353}
-  lever2: {fileID: 470602738}
-  lever3: {fileID: 1325710955}
-  lever4: {fileID: 1539889688}
+  deactivated: {r: 0, g: 0, b: 0, a: 0}
+  leverList: []
   sphere: {fileID: 386530418}
   endPoint: {fileID: 1942437793}
 --- !u!1 &1372198766
@@ -21231,6 +21232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 167821616}
+  pickup: {fileID: 0}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1381697332
@@ -21917,7 +21919,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3825cb3ff205e9544a8cca782318eeac, type: 2}
+  - {fileID: 2100000, guid: c437151edaf86e94790a71086c4aca54, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29768,6 +29770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1429108679}
+  pickup: {fileID: 0}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1963104355
