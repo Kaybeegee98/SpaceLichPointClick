@@ -74,7 +74,7 @@ public class fishing_minigame : MonoBehaviour
                     dullOrb.transform.Translate(1, 0, 0);
                     complete = true;
 
-                    if (sound != false)
+                    if (sound == false)
                     {
                         SoundCheck();
                     }
