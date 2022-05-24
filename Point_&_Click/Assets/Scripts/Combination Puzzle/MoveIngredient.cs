@@ -23,7 +23,6 @@ public class MoveIngredient : MonoBehaviour
         numberOfObjects = manager.ingredientObjects.Count;
         objectsList = manager.ingredientObjects;
         colorChangeAmount = (1 / numberOfObjects);
-        //initialPosition = transform.position;
     }
 
     void OnMouseDrag()
@@ -46,12 +45,6 @@ public class MoveIngredient : MonoBehaviour
                 color.a += colorChangeAmount;
                 potionMaterial.material.color = color;
                 currentArrayIndex += 1;
-                manager.setArrayIndex(currentArrayIndex);
-            }
-            else
-            {
-                manager.ResetPositions();
-                currentArrayIndex = 0;
                 manager.setArrayIndex(currentArrayIndex);
             }
         }
