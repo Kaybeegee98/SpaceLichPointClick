@@ -32,20 +32,6 @@ public class UIControl : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        if ((Camera.main.transform == up.transform) || (Camera.main.transform == down.transform))
-        {
-            GameObject.Find("Button_Right").GetComponent<Button>().interactable = false;
-            GameObject.Find("Button_Left").GetComponent<Button>().interactable = false;
-        }
-        else
-        {
-            GameObject.Find("Button_Right").GetComponent<Button>().interactable = true;
-            GameObject.Find("Button_Left").GetComponent<Button>().interactable = true;
-        }
-    }
-
     public void RightTurn()
     {
         TimeoutClick();
@@ -180,6 +166,8 @@ public class UIControl : MonoBehaviour
 
     private void TimeoutClick()
     {
+        Debug.Log("Timeout");
+
         GameObject.Find("Button_Right").GetComponent<Button>().interactable = false;
         GameObject.Find("Button_Left").GetComponent<Button>().interactable = false;
 
@@ -195,6 +183,8 @@ public class UIControl : MonoBehaviour
 
     private void TimeinClick()
     {
+        Debug.Log("Timein");
+
         GameObject.Find("Button_Right").GetComponent<Button>().interactable = true;
         GameObject.Find("Button_Left").GetComponent<Button>().interactable = true;
 
