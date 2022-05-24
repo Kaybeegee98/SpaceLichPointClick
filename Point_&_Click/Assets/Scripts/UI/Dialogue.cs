@@ -8,8 +8,9 @@ public class Dialogue : MonoBehaviour
 {
     public string dialogueText;
     public Text textBox;
-    public bool doorOpen;
+    public static bool doorOpen;
     public bool lichSealed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,9 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (doorOpen) {
+        doorOpen = DoorPuzzle.doorOpen;
+        if (!doorOpen) {
+            textBox.text = "yay";
             firstDialogue();
         }
         

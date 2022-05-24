@@ -11,11 +11,13 @@ public class DoorPuzzle : MonoBehaviour
     public GameObject keyboard;
     public GameObject progressBar;
     [SerializeField] Transform progressBarContainer;
+    public static bool doorOpen;
     
     void Start() {
         Vector3 progressBarScale = progressBarContainer.localScale;
         progressBarScale.y = 0;
         progressBarContainer.localScale = progressBarScale;
+        doorOpen = false;
     }
 
     void Update() {
@@ -98,6 +100,7 @@ public class DoorPuzzle : MonoBehaviour
             door.SetActive(false);
             keyboard.SetActive(false);
             progressBar.SetActive(false);
+            doorOpen = true;
         }
         else {
             Debug.Log("reset");
