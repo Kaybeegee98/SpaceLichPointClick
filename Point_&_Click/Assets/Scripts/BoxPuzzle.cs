@@ -27,6 +27,7 @@ public class BoxPuzzle : MonoBehaviour
     // public Image image;
 
     public GameObject wall;
+    public GameObject lines;
     public GameObject border;
     public GameObject door;
     public GameObject keyboard;
@@ -52,6 +53,7 @@ public class BoxPuzzle : MonoBehaviour
             //maybe on mouse down on box
             // image.enabled = true;
             wall.SetActive(false);
+            lines.SetActive(false);
             border.SetActive(true);
             door.SetActive(true);
             keyboard.SetActive(true);
