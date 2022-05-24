@@ -769,7 +769,7 @@ MonoBehaviour:
   orbFiveDull: {fileID: 1346993093}
   boxLid: {fileID: 163294037}
   wall: {fileID: 1752812705}
-  lines: {fileID: 0}
+  lines: {fileID: 1270701757}
   border: {fileID: 1293158486}
   door: {fileID: 1407989480}
   keyboard: {fileID: 2038785966}
@@ -7457,7 +7457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340396831090455619, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832024468198, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_RootOrder
@@ -7513,7 +7513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656386, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656399, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20093,7 +20093,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340396831090455619, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832024468198, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_RootOrder
@@ -20149,7 +20149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656386, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656399, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24810,7 +24810,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340396831090455619, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832024468198, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_RootOrder
@@ -24866,7 +24866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656386, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656399, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25004,7 +25004,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2340396831090455619, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832024468198, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_RootOrder
@@ -25060,7 +25060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656386, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656399, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
