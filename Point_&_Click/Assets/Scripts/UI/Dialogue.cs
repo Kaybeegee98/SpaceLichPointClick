@@ -15,20 +15,33 @@ public class Dialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("test update display running");
         // GetComponent<Typewriter>().Run("typewriter test", textBox);
         // dialogueText.text = "Test\n second line";
+    }
+
+    void Update() 
+    {
+        doorOpen = DoorPuzzle.doorOpen;
+
+        if (doorOpen) {
+            Debug.Log("update display running door open");
+            dialogueText = "Turn back...";
+            textBox.text = dialogueText;
+        }
     }
 
     // Update is called once per frame
     public void UpdateDisplay()
     {
+        Debug.Log("update display running");
         dialogueText = "Turn back...";
         textBox.text = dialogueText;
-        dialogueText = "typerwriter test back...";
-        GetComponent<Typewriter>().Run(dialogueText, textBox);
+        // dialogueText = "typerwriter test back...";
+        // GetComponent<Typewriter>().Run(dialogueText, textBox);
+        Debug.Log("second update display running");
+        // 
 
-        // doorOpen = DoorPuzzle.doorOpen;
-        // Debug.Log(doorOpen);
         // if (doorOpen) {
         //     // dialogueText = "Turn back...";
         //     // GetComponent<Typewriter>().Run(dialogueText, textBox);

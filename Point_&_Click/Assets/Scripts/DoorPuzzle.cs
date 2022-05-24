@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class DoorPuzzle : MonoBehaviour
 {
@@ -99,7 +101,8 @@ public class DoorPuzzle : MonoBehaviour
             keyboard.SetActive(false);
             progressBar.SetActive(false);
             doorOpen = true;
-            GetComponent<Dialogue>().UpdateDisplay();
+
+            // GetComponent<Dialogue>().UpdateDisplay();
         }
         else {
             Debug.Log("reset");
