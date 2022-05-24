@@ -4445,6 +4445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 180218944}
+  pickup: {fileID: 1232153218}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &287123721
@@ -6121,6 +6122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1865733600}
+  pickup: {fileID: 1232153218}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &460668730
@@ -8621,9 +8623,9 @@ MonoBehaviour:
   orb: {fileID: 904702476}
   colorMaterials:
   - {fileID: 2100000, guid: ab66bf83f0ead7d4288e73e0f1dec0fd, type: 2}
-  - {fileID: 2100000, guid: 6d439bb170f22ed4e9824a4a3c51275e, type: 2}
+  - {fileID: 2100000, guid: 0fdc7553fb92ea14ab9773e68fdf7347, type: 2}
   - {fileID: 2100000, guid: 73120b2e5017578478dc11340365b646, type: 2}
-  - {fileID: 2100000, guid: 7c4241c17c9a91344baadc3369f97230, type: 2}
+  - {fileID: 2100000, guid: b553f340cd353494086737141fdb247e, type: 2}
 --- !u!135 &598775482
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19060,6 +19062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 797968498}
+  pickup: {fileID: 1232153218}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1323356928
@@ -19789,10 +19792,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53fb97b84c2c9d240bc3fc0fa5957ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lever1: {fileID: 1494233353}
-  lever2: {fileID: 470602738}
-  lever3: {fileID: 1325710955}
-  lever4: {fileID: 1539889688}
+  deactivated: {r: 0.017399432, g: 0.02033446, b: 0.21698111, a: 0}
+  leverList:
+  - {fileID: 1494233353}
+  - {fileID: 470602738}
+  - {fileID: 1325710955}
+  - {fileID: 1539889688}
   sphere: {fileID: 386530418}
   endPoint: {fileID: 1942437793}
 --- !u!1 &1372198766
@@ -20311,6 +20316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 167821616}
+  pickup: {fileID: 1232153218}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1381697332
@@ -28474,6 +28480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1429108679}
+  pickup: {fileID: 1232153218}
   pedestalCol: {fileID: 0}
   completed: 0
 --- !u!114 &1963104355
