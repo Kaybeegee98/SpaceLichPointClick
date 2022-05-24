@@ -1,28 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DullOrbSwap : MonoBehaviour
 {
     public GameObject orbDull;
     public GameObject orbPurple;
-    // public bool gameStatus;
+    [SerializeField] private Text invText;
+    [SerializeField] CombinationManager manager;
+    private bool potionComplete;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // gameStatus = matts puzzle done
+        if (manager.potionComplete)
+        {
+            potionComplete = true;
+        }
     }
 
     void OnMouseDown()
     {
-        orbDull.SetActive(false);
-        orbPurple.SetActive(true);
+        if (potionComplete)
+        {
+            orbDull.SetActive(false);
+            orbPurple.SetActive(true);
+        }
     }
 }
