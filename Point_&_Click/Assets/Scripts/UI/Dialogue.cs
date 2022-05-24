@@ -14,6 +14,7 @@ public class Dialogue : MonoBehaviour
     public bool lichSealed = false;
     public GameObject panel;
 
+    public Image image;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class Dialogue : MonoBehaviour
         Debug.Log("test update display running");
         // GetComponent<Typewriter>().Run("typewriter test", textBox);
         // dialogueText.text = "Test\n second line";
+        image.enabled = false;
     }
 
     void Update() 
@@ -125,21 +127,23 @@ public class Dialogue : MonoBehaviour
         yield return new WaitForSeconds(8);
         dialogueText = "Unknown:  We cannot thank you enough for aiding us. Now it can begin.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(14);
+        yield return new WaitForSeconds(12);
         dialogueText = "Unknown:  Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(13);
         dialogueText = "Unknown:  Preparing for the invasion of your world.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(8);
         dialogueText = "Unknown:  Mankind's end is imminent.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(4);
 
         dialogueText = "";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(2);
 
         panel.SetActive(false);
+
+        image.enabled = true;
     }
 }
