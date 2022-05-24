@@ -6,11 +6,19 @@ public class Port : MonoBehaviour
 {
     public MatchEntity ownerMatchEntity;
 
+    public bool insert = false;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out MovablePair CollidedMoveable))
         {
-            ownerMatchEntity.PairObjectInteraction(true, CollidedMoveable);
+            if (insert == false)
+            {
+                ownerMatchEntity.PairObjectInteraction(true, CollidedMoveable);
+
+                insert = true;
+            }
+
         }
     }
 
@@ -19,6 +27,8 @@ public class Port : MonoBehaviour
         if (other.gameObject.TryGetComponent(out MovablePair CollidedMoveable))
         {
             ownerMatchEntity.PairObjectInteraction(false, CollidedMoveable);
+
+            insert = false;
         }
     }
 

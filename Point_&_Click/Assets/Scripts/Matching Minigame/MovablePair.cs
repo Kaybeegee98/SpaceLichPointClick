@@ -23,10 +23,12 @@ public class MovablePair : MonoBehaviour
       }
     }
 
-    private void OnMouseUp() {
-      if (!connected) {
-        ResetPosition();
-      }
+    private void OnMouseUp()
+    {
+        if (!connected)
+        {
+            ResetPosition();
+        }
     }
 
     public Vector3 GetPosition() {
