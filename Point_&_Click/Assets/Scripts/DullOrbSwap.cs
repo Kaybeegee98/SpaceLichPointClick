@@ -9,7 +9,7 @@ public class DullOrbSwap : MonoBehaviour
     public GameObject orbPurple;
     [SerializeField] private Text invText;
     [SerializeField] CombinationManager manager;
-    private bool potionComplete;
+    private bool potionDone;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +22,13 @@ public class DullOrbSwap : MonoBehaviour
     {
         if (manager.potionComplete)
         {
-            potionComplete = true;
+            potionDone = true;
         }
     }
 
     void OnMouseDown()
     {
-        if (potionComplete)
+        if (potionDone)
         {
             orbDull.SetActive(false);
             orbPurple.SetActive(true);
