@@ -13,6 +13,10 @@ public class RotateRing : MonoBehaviour
     public GameObject orb;
     public bool complete;
 
+    public AudioSource click;
+    [HideInInspector]
+    public bool sound = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +28,17 @@ public class RotateRing : MonoBehaviour
     {
         // when aligned print console msg and set rotation value to 0 to stop moving
         // if (Mathf.Round(ringInner.transform.localRotation.eulerAngles.y) == 180 && Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) == 90 && Mathf.Round(ringOuter.transform.localRotation.eulerAngles.y) == 180) {
-        if (Mathf.Round(ringInner.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && Mathf.Round(ringOuter.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && !complete) {
+        if (Mathf.Round(ringInner.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && Mathf.Round(ringOuter.transform.localRotation.eulerAngles.y) == Mathf.Round(ringMiddle.transform.localRotation.eulerAngles.y) && !complete)
+        {
             Debug.Log("all aligned");
             rotation.Set(0, 0, 0);
             orb.transform.Translate(transformation);
             complete = true;
+
+            if (sound == false)
+            {
+                SoundCheck();
+            }
         }
     }
 
@@ -36,8 +46,18 @@ public class RotateRing : MonoBehaviour
     {
         // rotated clicked ring
         ringClicked.transform.Rotate(rotation);
-        
+
         // print rotation to the console
         Debug.Log("rotation is " + Mathf.Round(ringClicked.transform.localRotation.eulerAngles.y));
+    }
+
+    private void SoundCheck()
+    {
+        if (click != null)
+        {
+            click.Play();
+        }
+
+        sound = true;
     }
 }
