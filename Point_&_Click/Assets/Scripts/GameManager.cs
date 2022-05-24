@@ -32,7 +32,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Location>() != null)
+        if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Waypoint>() != null)
+        {
+            currentNode.GetComponent<Waypoint>().prevLocation.Arrive();
+        }
+        else if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Location>() != null)
         {
             currentNode.GetComponent<Location>().room.Arrive();
         }
@@ -58,12 +62,6 @@ public class GameManager : MonoBehaviour
             seq.Join(Camera.main.transform.DORotate(uiControl.north.rotation.eulerAngles, 0.75f));
 
             uiControl.direction = "north";
-        }
-
-        if (Input.GetKeyDown("space"))
-        {
-            Debug.Log("Space was pressed");
-            uiControl.RightTurn();
         }
     }
 }
