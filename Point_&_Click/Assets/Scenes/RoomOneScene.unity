@@ -2334,8 +2334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1613983261}
   orbPurple: {fileID: 721254662}
-  invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  invText: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &137300323
 GameObject:
   m_ObjectHideFlags: 0
@@ -10149,7 +10149,7 @@ MonoBehaviour:
   orbDull: {fileID: 494912728}
   orbPurple: {fileID: 2103469115}
   invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  manager: {fileID: 0}
 --- !u!1 &498151725
 GameObject:
   m_ObjectHideFlags: 0
@@ -10552,8 +10552,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1611744359}
   orbPurple: {fileID: 506650475}
-  invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  invText: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &514858700
 GameObject:
   m_ObjectHideFlags: 0
@@ -26596,7 +26596,7 @@ MonoBehaviour:
   orbDull: {fileID: 1305424185}
   orbPurple: {fileID: 1507673183}
   invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  manager: {fileID: 0}
 --- !u!1 &1307226945
 GameObject:
   m_ObjectHideFlags: 0
@@ -27675,7 +27675,7 @@ MonoBehaviour:
   orbDull: {fileID: 1346993093}
   orbPurple: {fileID: 2143165795}
   invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  manager: {fileID: 0}
 --- !u!1001 &1350547734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32798,7 +32798,7 @@ MonoBehaviour:
   orbDull: {fileID: 1611744359}
   orbPurple: {fileID: 506650475}
   invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  manager: {fileID: 0}
 --- !u!1 &1611842532
 GameObject:
   m_ObjectHideFlags: 0
@@ -33109,7 +33109,7 @@ MonoBehaviour:
   orbDull: {fileID: 1613983261}
   orbPurple: {fileID: 721254662}
   invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  manager: {fileID: 0}
 --- !u!1 &1619233661
 GameObject:
   m_ObjectHideFlags: 0
@@ -34582,8 +34582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 494912728}
   orbPurple: {fileID: 2103469115}
-  invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  invText: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &1711504478
 GameObject:
   m_ObjectHideFlags: 0
@@ -38062,8 +38062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1305424185}
   orbPurple: {fileID: 1507673183}
-  invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  invText: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &1876075601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8242711457820704425, guid: 18689d3058125f346aa84f1126d11c9a, type: 3}
@@ -39145,8 +39145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1346993093}
   orbPurple: {fileID: 2143165795}
-  invText: {fileID: 812849204}
-  manager: {fileID: 346539993}
+  invText: {fileID: 0}
+  manager: {fileID: 0}
 --- !u!1 &1942015326
 GameObject:
   m_ObjectHideFlags: 0

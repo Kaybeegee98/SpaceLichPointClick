@@ -10,6 +10,11 @@ public class LeversManager : MonoBehaviour
     public Transform sphere;
     public Transform endPoint;
 
+    public AudioSource click;
+
+    [HideInInspector]
+    public bool sound = false;
+
     public void Update()
     {
         if (leverList[0].state && leverList[1].state && !(leverList[2].state) && leverList[3].state)
@@ -22,8 +27,23 @@ public class LeversManager : MonoBehaviour
 
             if (sphere != null)
             {
-                sphere.position = Vector3.MoveTowards(sphere.position, endPoint.position, Time.deltaTime);
+                sphere.position = Vector3.MoveTowards(sphere.position, endPoint.position, Time.deltaTime * 2f);
+            }
+
+            if (sound == false)
+            {
+                SoundCheck();
             }
         }
+    }
+
+    private void SoundCheck()
+    {
+        if (click != null)
+        {
+            click.Play();
+        }
+
+        sound = true;
     }
 }

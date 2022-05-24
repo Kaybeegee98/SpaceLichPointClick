@@ -8,6 +8,7 @@ public class fishing_minigame : MonoBehaviour
     public GameObject dullOrb;
     public bool complete;
     public Location local;
+    public AudioSource click;
 
     [Header("Fishing Area")]
     [SerializeField] Transform topBounds;
@@ -37,7 +38,10 @@ public class fishing_minigame : MonoBehaviour
     float catchProgress;
 
     bool checkpoint;
-    
+
+    [HideInInspector]
+    public bool sound = false;
+
     private void Start() {
         catchProgress = 0;
         complete = false;
@@ -63,13 +67,20 @@ public class fishing_minigame : MonoBehaviour
                 if (catchProgress >= 0.5f) {
                     checkpoint = true;
                 }
-                if (catchProgress >= 1) {
+                if (catchProgress >= 1)
+                {
                     // Debug.Log("you win!!!! fishy");
                     orb.transform.Translate(-1, 0, 0);
                     dullOrb.transform.Translate(1, 0, 0);
                     complete = true;
+
+                    if (sound != false)
+                    {
+                        SoundCheck();
+                    }
                 }
-            } else {
+            }
+            else {
                 if (checkpoint) {
                     if (catchProgress > 0.5f) {
                         catchProgress -= progressBarDecay * Time.deltaTime;
@@ -118,5 +129,15 @@ public class fishing_minigame : MonoBehaviour
         }
         fishPosition = Mathf.SmoothDamp(fishPosition, fishTargetPosition, ref fishSpeed, smoothMotion);
         fish.position = Vector3.Lerp(bottomBounds.position, topBounds.position, fishPosition);
+    }
+
+    private void SoundCheck()
+    {
+        if (click != null)
+        {
+            click.Play();
+        }
+
+        sound = true;
     }
 }

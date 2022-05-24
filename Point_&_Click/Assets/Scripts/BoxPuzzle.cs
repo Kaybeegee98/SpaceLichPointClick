@@ -37,9 +37,11 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject progressBar;
 
     public UIControl uiControl;
+    public AudioSource rumble;
 
     [HideInInspector]
     public bool activated = false;
+    public bool sound = false;
 
 
     void Start()
@@ -85,6 +87,21 @@ public class BoxPuzzle : MonoBehaviour
             activated = true;
 
             this.GetComponent<Location>().Arrive();
+
+            if (sound == false)
+            {
+                SoundCheck();
+            }
         }
+    }
+
+    private void SoundCheck()
+    {
+        if (rumble != null)
+        {
+            rumble.Play();
+        }
+
+        sound = true;
     }
 }
