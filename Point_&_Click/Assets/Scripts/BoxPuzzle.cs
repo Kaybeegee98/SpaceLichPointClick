@@ -36,7 +36,6 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject barsPurple;
     public GameObject progressBar;
 
-    public UIControl uiControl;
     public AudioSource rumble;
 
     [HideInInspector]

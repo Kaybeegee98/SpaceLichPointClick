@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
         {
             currentNode.GetComponent<Location>().room.Arrive();
         }
+        else if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Prop>() != null && currentNode.GetComponent<Prop>().problem == true)
+        {
+            currentNode.GetComponent<Prop>().loc.GetComponent<Location>().room.Arrive();
+        }
         else if (Input.GetMouseButtonUp(1) && currentNode.GetComponent<Prop>() != null)
         {
             if (ivCanvas.gameObject.activeInHierarchy)
