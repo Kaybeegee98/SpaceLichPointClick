@@ -27,10 +27,12 @@ public class BoxPuzzle : MonoBehaviour
     // public Image image;
 
     public GameObject wall;
-    public GameObject lines;
+    public GameObject bars;
     public GameObject border;
     public GameObject door;
     public GameObject keyboard;
+    public GameObject barsGreen;
+    public GameObject barsPurple;
 
 
     void Start()
@@ -53,10 +55,12 @@ public class BoxPuzzle : MonoBehaviour
             //maybe on mouse down on box
             // image.enabled = true;
             wall.SetActive(false);
-            lines.SetActive(false);
+            bars.SetActive(false);
             border.SetActive(true);
             door.SetActive(true);
             keyboard.SetActive(true);
+            barsGreen.SetActive(false);
+            barsPurple.SetActive(true);
 
             orbOne.SetActive(false);
             orbTwo.SetActive(false);
