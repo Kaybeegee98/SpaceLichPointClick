@@ -4,17 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour
+public class CodeSceneLoad : MonoBehaviour
 {
-    private InputField inputtedCode;
+    public InputField inputtedCode;
 
     void Start() {
-        inputtedCode = GetComponent<InputField>();
     }
 
     public void CheckCodeAndLoad() {
         if (inputtedCode.text.Trim().ToLower() == "phantom") {
-            SceneManager.LoadScene("Skip_To_Room_Two");
+            SceneManager.LoadScene("RoomOneScene");
         }
     }
 }
