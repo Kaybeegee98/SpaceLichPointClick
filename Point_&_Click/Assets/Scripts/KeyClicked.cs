@@ -17,8 +17,7 @@ public class KeyClicked : MonoBehaviour
 
         //Call SetColor using the shader property name "_Color" and setting the color to red
         keyRenderer.material.SetColor("_Color", Color.red);
-        // new WaitForSeconds(5);
-        // StartCoroutine(DelayAction());
+
         Invoke("ChangeColour", 0.3f);
         
     }
