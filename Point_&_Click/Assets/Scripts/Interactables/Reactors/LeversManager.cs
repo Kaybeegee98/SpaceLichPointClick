@@ -1,25 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LeversManager : MonoBehaviour
 {
-    public Switcher lever1;
-    public Switcher lever2;
-    public Switcher lever3;
-    public Switcher lever4;
+    public Color deactivated;
+
+    public List<Switcher> leverList;
 
     public Transform sphere;
     public Transform endPoint;
 
     public void Update()
     {
-        if (lever1.state && lever2.state && !(lever3.state) && lever4.state)
+        if (leverList[0].state && leverList[1].state && !(leverList[2].state) && leverList[3].state)
         {
-            lever1.TurnOff();
-            lever2.TurnOff();
-            lever3.TurnOff();
-            lever4.TurnOff();
+            foreach (Switcher s in leverList)
+            {
+                s.GetComponent<Collider>().enabled = false;
+                s.GetComponentInChildren<MeshRenderer>().material.color = deactivated;
+            }
 
             if (sphere != null)
             {

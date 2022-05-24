@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pedestal : MonoBehaviour
 {
     public GameObject orb;
+    public AudioSource pickup;
 
     [HideInInspector]
     public Collider pedestalCol;
@@ -23,6 +24,7 @@ public class Pedestal : MonoBehaviour
             if (GameManager.ins.itemsHeld.Count != 0)
             {
                 PlaceOrb();
+                pickup.Play();
             }
         }
     }
