@@ -2343,6 +2343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1613983261}
   orbPurple: {fileID: 721254662}
+  invText: {fileID: 0}
 --- !u!1 &137300323
 GameObject:
   m_ObjectHideFlags: 0
@@ -7094,6 +7095,7 @@ MonoBehaviour:
   - {fileID: 310859318}
   - {fileID: 979469971}
   - {fileID: 1299011686}
+  invText: {fileID: 812849204}
 --- !u!1 &351783204
 GameObject:
   m_ObjectHideFlags: 0
@@ -10073,6 +10075,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequancy: 0.3
   amplitude: 0.1
+--- !u!114 &494912731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494912728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea9008e98b7794b89c18d3f6a23ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbDull: {fileID: 494912728}
+  orbPurple: {fileID: 2103469115}
+  invText: {fileID: 812849204}
 --- !u!1 &498151725
 GameObject:
   m_ObjectHideFlags: 0
@@ -10475,6 +10492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1611744359}
   orbPurple: {fileID: 506650475}
+  invText: {fileID: 0}
 --- !u!1 &514858700
 GameObject:
   m_ObjectHideFlags: 0
@@ -10485,6 +10503,8 @@ GameObject:
   m_Component:
   - component: {fileID: 514858701}
   - component: {fileID: 514858702}
+  - component: {fileID: 514858703}
+  - component: {fileID: 514858704}
   m_Layer: 0
   m_Name: RoomTwo
   m_TagString: Untagged
@@ -10530,6 +10550,32 @@ MonoBehaviour:
   footstep: {fileID: 472648704}
   col: {fileID: 0}
   room: {fileID: 0}
+--- !u!114 &514858703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514858700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6559f6f14d4816b4e8a3f63f543336bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prevLocation: {fileID: 560124817}
+--- !u!135 &514858704
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514858700}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4
+  m_Center: {x: 0, y: 2, z: 6}
 --- !u!224 &515929629 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2722835826889976566, guid: 1564f26664fd1224a9845f89fd3c2add, type: 3}
@@ -26474,6 +26520,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequancy: 0.3
   amplitude: 0.1
+--- !u!114 &1305424188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305424185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea9008e98b7794b89c18d3f6a23ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbDull: {fileID: 1305424185}
+  orbPurple: {fileID: 1507673183}
+  invText: {fileID: 812849204}
 --- !u!1 &1307226945
 GameObject:
   m_ObjectHideFlags: 0
@@ -26491,7 +26552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1307226946
 AudioListener:
   m_ObjectHideFlags: 0
@@ -27537,6 +27598,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequancy: 0.3
   amplitude: 0.1
+--- !u!114 &1346993096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346993093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea9008e98b7794b89c18d3f6a23ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbDull: {fileID: 1346993093}
+  orbPurple: {fileID: 2143165795}
+  invText: {fileID: 812849204}
 --- !u!1001 &1350547734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32644,6 +32720,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequancy: 0.3
   amplitude: 0.1
+--- !u!114 &1611744362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611744359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea9008e98b7794b89c18d3f6a23ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbDull: {fileID: 1611744359}
+  orbPurple: {fileID: 506650475}
+  invText: {fileID: 812849204}
 --- !u!1 &1611842532
 GameObject:
   m_ObjectHideFlags: 0
@@ -32939,6 +33030,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frequancy: 0.3
   amplitude: 0.1
+--- !u!114 &1613983264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613983261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea9008e98b7794b89c18d3f6a23ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbDull: {fileID: 1613983261}
+  orbPurple: {fileID: 721254662}
+  invText: {fileID: 812849204}
 --- !u!1 &1619233661
 GameObject:
   m_ObjectHideFlags: 0
@@ -34266,7 +34372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: 
   textBox: {fileID: 0}
-  doorOpen: 0
   lichSealed: 0
 --- !u!114 &1685284404
 MonoBehaviour:
@@ -34282,7 +34387,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: 
   textBox: {fileID: 0}
-  doorOpen: 0
   lichSealed: 0
 --- !u!114 &1685284405
 MonoBehaviour:
@@ -34413,6 +34517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 494912728}
   orbPurple: {fileID: 2103469115}
+  invText: {fileID: 0}
 --- !u!1 &1711504478
 GameObject:
   m_ObjectHideFlags: 0
@@ -37891,6 +37996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1305424185}
   orbPurple: {fileID: 1507673183}
+  invText: {fileID: 0}
 --- !u!1 &1876075601 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8242711457820704425, guid: 18689d3058125f346aa84f1126d11c9a, type: 3}
@@ -38972,6 +39078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1346993093}
   orbPurple: {fileID: 2143165795}
+  invText: {fileID: 0}
 --- !u!1 &1942015326
 GameObject:
   m_ObjectHideFlags: 0
@@ -39581,6 +39688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967837552}
   - component: {fileID: 1967837553}
+  - component: {fileID: 1967837554}
   m_Layer: 0
   m_Name: Alter
   m_TagString: Untagged
@@ -39630,7 +39738,20 @@ MonoBehaviour:
   reachableNodes: []
   footstep: {fileID: 472648704}
   col: {fileID: 0}
-  loc: {fileID: 0}
+  loc: {fileID: 514858702}
+--- !u!65 &1967837554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967837551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8, y: 8, z: 1}
+  m_Center: {x: 0, y: 2, z: 2.5}
 --- !u!1 &1971160698
 GameObject:
   m_ObjectHideFlags: 0

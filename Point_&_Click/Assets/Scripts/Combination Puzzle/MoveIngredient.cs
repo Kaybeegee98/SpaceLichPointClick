@@ -16,7 +16,7 @@ public class MoveIngredient : MonoBehaviour
     private List<GameObject> objectsList;
     private int currentArrayIndex = 0;
     private Vector3 initialPosition;
-   
+
     void Start()
     {
         cameraZDistance = mainCamera.WorldToScreenPoint(transform.position).z;
@@ -48,15 +48,18 @@ public class MoveIngredient : MonoBehaviour
                 potionMaterial.material.color = color;
                 currentArrayIndex += 1;
                 manager.setArrayIndex(currentArrayIndex);
+                manager.setColor(color);
             }
         }
     }
 
-    private void OnMouseUp() {
+    private void OnMouseUp()
+    {
         ResetPosition();
     }
 
-    private void ResetPosition() {
+    private void ResetPosition()
+    {
         transform.position = initialPosition;
     }
 
