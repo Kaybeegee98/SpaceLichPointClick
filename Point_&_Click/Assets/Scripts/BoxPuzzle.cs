@@ -33,6 +33,7 @@ public class BoxPuzzle : MonoBehaviour
     public GameObject keyboard;
     public GameObject barsGreen;
     public GameObject barsPurple;
+    public GameObject progressBar;
 
 
     void Start()
@@ -61,6 +62,7 @@ public class BoxPuzzle : MonoBehaviour
             keyboard.SetActive(true);
             barsGreen.SetActive(false);
             barsPurple.SetActive(true);
+            progressBar.SetActive(true);
 
             orbOne.SetActive(false);
             orbTwo.SetActive(false);

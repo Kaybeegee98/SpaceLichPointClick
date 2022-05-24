@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class MatchSystemManager : MonoBehaviour
 {
-    public Vector3 transformation;
+    // public Vector3 transformation;
     public GameObject orb;
 
     [SerializeField] private List<Material> colorMaterials;
@@ -54,7 +54,7 @@ public class MatchSystemManager : MonoBehaviour
 
       if (currentMatchCount == targetMatchCount) {
         Debug.Log("WELL DONE! ALL PAIRED!");
-          orb.transform.Translate(transformation);
+          orb.SetActive(true); //transform.Translate(transformation);
       }
     }
 
