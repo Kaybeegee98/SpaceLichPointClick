@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class InventoryDisplay : MonoBehaviour
 {
     Text displayText;
-    // Text dialogueText;
 
     void Awake()
     {
@@ -15,13 +14,6 @@ public class InventoryDisplay : MonoBehaviour
 
     public void UpdateDisplay()
     {
-        displayText.text = "Number of Orbs Collected: " + GameManager.ins.itemsHeld.Count;
-        // if (purple orbs all placed...) {
-            // EndingText();
-        // }
-    }
-
-    public void EndingText() {
-        // dialogueText.text = "test";
+        displayText.text = "Number of Spheres Collected: " + GameManager.ins.itemsHeld.Count;
     }
 }
