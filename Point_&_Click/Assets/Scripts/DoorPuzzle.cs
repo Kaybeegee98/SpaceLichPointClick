@@ -99,7 +99,7 @@ public class DoorPuzzle : MonoBehaviour
             keyboard.SetActive(false);
             progressBar.SetActive(false);
             doorOpen = true;
-            GetComponent<Dialogue>().UpdateDisplay();
+            // GetComponent<Dialogue>().UpdateDisplay();
         }
         else {
             Debug.Log("reset");
