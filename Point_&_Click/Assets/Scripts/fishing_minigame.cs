@@ -48,16 +48,7 @@ public class fishing_minigame : MonoBehaviour
         MoveFish();
         MoveHook();
         CheckProgress();
-        // ProgressCheckpoint();
     }
-
-    // private void ProgressCheckpoint() {
-    //     if (catchProgress >= 0.5f) {
-    //         if (catchProgress < 0.5f) {
-    //             catchProgress = 0.5f;
-    //         }
-    //     }
-    // }
 
     private void CheckProgress() {
         Vector3 progressBarScale = progressBarContainer.localScale;

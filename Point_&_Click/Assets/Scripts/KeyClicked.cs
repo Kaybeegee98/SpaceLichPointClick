@@ -15,8 +15,8 @@ public class KeyClicked : MonoBehaviour
         //Get the Renderer component from the new cube
         var keyRenderer = this.GetComponent<Renderer>();
 
-        //Call SetColor using the shader property name "_Color" and setting the color to red
-        keyRenderer.material.SetColor("_Color", Color.red);
+        //Call SetColor using the shader property name "_Color" and setting the color to white
+        keyRenderer.material.SetColor("_Color", Color.white);
 
         Invoke("ChangeColour", 0.3f);
         
