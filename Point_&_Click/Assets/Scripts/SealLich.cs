@@ -10,11 +10,7 @@ public class SealLich : MonoBehaviour
     public GameObject orbFourPurple;
     public GameObject orbFivePurple;
 
-    public GameObject orbOneDull;
-    public GameObject orbTwoDull;
-    public GameObject orbThreeDull;
-    public GameObject orbFourDull;
-    public GameObject orbFiveDull;
+    public GameObject boxLid;
 
     // Start is called before the first frame update
     void Start()
@@ -25,21 +21,8 @@ public class SealLich : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (secondHalf) {
-            orbOnePurple.SetActive(true);
-            orbTwoPurple.SetActive(true);
-            orbThreePurple.SetActive(true);
-            orbFourPurple.SetActive(true);
-            orbFivePurple.SetActive(true);
-
-            orbOneDull.SetActive(false);
-            orbTwoDull.SetActive(false);
-            orbThreeDull.SetActive(false);
-            orbFourDull.SetActive(false);
-            orbFiveDull.SetActive(false);     
-        // }
-        
-   
+        if (orbOnePurple.activeSelf && orbTwoPurple.activeSelf && orbThreePurple.activeSelf && orbFourPurple.activeSelf && orbFivePurple.activeSelf) {
+            boxLid.SetActive(true);
+        }
     }
-
 }

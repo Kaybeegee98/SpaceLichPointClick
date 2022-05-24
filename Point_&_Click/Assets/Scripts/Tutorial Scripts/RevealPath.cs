@@ -8,11 +8,13 @@ public class RevealPath : MonoBehaviour
     public GameObject toBeMoved;
     public Transform endPoint;
     public UIControl uiControl;
+    public AudioSource rumble;
 
     public Pedestal checkPedestal;
 
     [HideInInspector]
     public bool force = false;
+    public bool sound = false;
 
     private void Update()
     {
@@ -22,6 +24,11 @@ public class RevealPath : MonoBehaviour
             {
                 toBeMoved.transform.position = Vector3.MoveTowards(toBeMoved.transform.position, endPoint.position, (Time.deltaTime * 2));
                 ForceCamera();
+
+                if (sound == false)
+                {
+                    SoundCheck();
+                }
 
                 if (toBeMoved.transform.position == endPoint.position)
                 {
@@ -47,5 +54,15 @@ public class RevealPath : MonoBehaviour
         force = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    private void SoundCheck()
+    {
+        if (rumble != null)
+        {
+            rumble.Play();
+        }
+
+        sound = true;
     }
 }
