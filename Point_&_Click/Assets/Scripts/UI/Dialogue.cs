@@ -33,7 +33,7 @@ public class Dialogue : MonoBehaviour
             doorOpened = true;
         }
 
-        if (lichSealed && !lichSealed) {
+        if (lichSeal && !lichSealed) {
             StartCoroutine(endDialogue());
             lichSealed = true;
         }
