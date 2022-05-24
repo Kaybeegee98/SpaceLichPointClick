@@ -15,6 +15,7 @@ public class MoveIngredient : MonoBehaviour
     private float numberOfObjects;
     private List<GameObject> objectsList;
     private int currentArrayIndex = 0;
+    private Vector3 initialPosition;
    
     void Start()
     {
@@ -23,6 +24,7 @@ public class MoveIngredient : MonoBehaviour
         numberOfObjects = manager.ingredientObjects.Count;
         objectsList = manager.ingredientObjects;
         colorChangeAmount = (1 / numberOfObjects);
+        initialPosition = transform.position;
     }
 
     void OnMouseDrag()
@@ -48,6 +50,14 @@ public class MoveIngredient : MonoBehaviour
                 manager.setArrayIndex(currentArrayIndex);
             }
         }
+    }
+
+    private void OnMouseUp() {
+        ResetPosition();
+    }
+
+    private void ResetPosition() {
+        transform.position = initialPosition;
     }
 
     // Update is called once per frame
