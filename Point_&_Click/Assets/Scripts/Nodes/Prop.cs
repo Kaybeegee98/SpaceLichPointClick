@@ -7,6 +7,8 @@ public class Prop : Node
     public Location loc;
     Interactable interact;
 
+    public bool problem = false;
+
     private void Awake()
     {
         interact = GetComponent<Interactable>();

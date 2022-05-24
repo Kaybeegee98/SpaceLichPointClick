@@ -49,7 +49,18 @@ public class Room : Node
                 seq.Join(Camera.main.transform.DORotate(uiControl.east.rotation.eulerAngles, 0.75f));
                 break;
             case ("up"):
-                Debug.Log("This part works");
+                if (uiControl.up != null)
+                {
+                    seq.Append(Camera.main.transform.DOMove(uiControl.up.position, 0.75f));
+                    seq.Join(Camera.main.transform.DORotate(uiControl.up.rotation.eulerAngles, 0.75f));
+                }
+                break;
+            case ("down"):
+                if (uiControl.down != null)
+                {
+                    seq.Append(Camera.main.transform.DOMove(uiControl.down.position, 0.75f));
+                    seq.Join(Camera.main.transform.DORotate(uiControl.down.rotation.eulerAngles, 0.75f));
+                }
                 break;
         }
 
