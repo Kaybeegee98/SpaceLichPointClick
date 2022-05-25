@@ -16,6 +16,8 @@ public class MatchSystemManager : MonoBehaviour
     private int targetMatchCount;
     private int currentMatchCount = 0;
 
+    public bool puzzleDone = false;
+
     [HideInInspector]
     public bool sound = false;
     void Start()
@@ -68,7 +70,11 @@ public class MatchSystemManager : MonoBehaviour
         if (currentMatchCount == targetMatchCount)
         {
             Debug.Log("WELL DONE! ALL PAIRED!");
-            orb.SetActive(true); //transform.Translate(transformation);
+            if (!puzzleDone) {
+                orb.SetActive(true); //transform.Translate(transformation); 
+                puzzleDone = true;
+            }
+
             if (sound == false)
             {
                 SoundCheck();
