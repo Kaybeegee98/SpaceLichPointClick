@@ -121,7 +121,7 @@ private IEnumerator boxDialogue() {
         // yield return new WaitForSeconds(8);
         dialogueText = "Xelmoroch:  All is not as it seems...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(6);
 
         dialogueText = "Unknown:  Ignore the lich!";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
@@ -136,7 +136,7 @@ private IEnumerator boxDialogue() {
         // yield return new WaitForSeconds(3);
         dialogueText = "Unknown:  Move quickly, there is still time to stop him!";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(11);
+        yield return new WaitForSeconds(9);
 
         dialogueText = "";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
@@ -153,10 +153,10 @@ private IEnumerator boxDialogue() {
         yield return new WaitForSeconds(8);
         dialogueText = "Unknown:  We cannot thank you enough for aiding us. Now it can begin.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(10);
-        dialogueText = "Unknown:  Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
+        yield return new WaitForSeconds(9);
+        dialogueText = "Unknown:  Now that your pesky saviour is imprisoned permanently, we can start preparing...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(11);
+        yield return new WaitForSeconds(10);
         dialogueText = "Unknown:  Preparing for the invasion of your world.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(8);
