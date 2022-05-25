@@ -13,7 +13,7 @@ public class CodeSceneLoad : MonoBehaviour
 
     public void CheckCodeAndLoad() {
         if (inputtedCode.text.Trim().ToLower() == "phantom") {
-            SceneManager.LoadScene("RoomOneScene");
+            SceneManager.LoadScene("ResumeRoomOne");
         }
     }
 }

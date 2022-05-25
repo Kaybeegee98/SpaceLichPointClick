@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RoomOneScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/ResumeRoomOne.unity
+    guid: db0db7a862746da48b3a71dc0e720fcb
   m_configObjects: {}

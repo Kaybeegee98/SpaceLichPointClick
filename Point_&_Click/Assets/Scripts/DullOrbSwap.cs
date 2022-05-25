@@ -7,7 +7,6 @@ public class DullOrbSwap : MonoBehaviour
 {
     public GameObject orbDull;
     public GameObject orbPurple;
-    [SerializeField] private Text invText;
     [SerializeField] CombinationManager manager;
     private bool potionDone;
 
