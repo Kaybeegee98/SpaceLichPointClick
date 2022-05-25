@@ -12772,6 +12772,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0fdc7553fb92ea14ab9773e68fdf7347, type: 2}
   - {fileID: 2100000, guid: 73120b2e5017578478dc11340365b646, type: 2}
   - {fileID: 2100000, guid: b553f340cd353494086737141fdb247e, type: 2}
+  puzzleDone: 0
   sound: 0
 --- !u!135 &598775482
 SphereCollider:

@@ -153,16 +153,16 @@ private IEnumerator boxDialogue() {
         yield return new WaitForSeconds(8);
         dialogueText = "Unknown:  We cannot thank you enough for aiding us. Now it can begin.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(12);
+        yield return new WaitForSeconds(10);
         dialogueText = "Unknown:  Now that your pesky saviour is imprisoned permanently, we can now begin preparing...";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(13);
+        yield return new WaitForSeconds(11);
         dialogueText = "Unknown:  Preparing for the invasion of your world.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
         yield return new WaitForSeconds(8);
         dialogueText = "Unknown:  Mankind's end is imminent.";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(5);
 
         dialogueText = "";
         GetComponent<Typewriter>().Run(dialogueText, textBox);
