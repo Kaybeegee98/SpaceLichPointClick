@@ -21578,7 +21578,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -21627,7 +21627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16, y: -13}
+  m_AnchoredPosition: {x: 16, y: -9}
   m_SizeDelta: {x: 595.3518, y: 67.3922}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &958988438
@@ -34586,6 +34586,7 @@ MonoBehaviour:
   progressBarContainer: {fileID: 1657750300}
   hookPower: 0.05
   progressBarDecay: 0.1
+  catchProgress: 0
   sound: 0
 --- !u!1 &1690135388
 GameObject:
@@ -41540,10 +41541,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
