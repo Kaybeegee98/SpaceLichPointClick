@@ -17,6 +17,7 @@ public class Dialogue : MonoBehaviour
     public GameObject panel;
 
     public Image image;
+    GameObject exitBtn;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,9 @@ public class Dialogue : MonoBehaviour
         // GetComponent<Typewriter>().Run("typewriter test", textBox);
         // dialogueText.text = "Test\n second line";
         image.enabled = false;
+        exitBtn = GameObject.Find("ButtonExit");
+        // exitBtn.enabled = false;
+        exitBtn.SetActive(false);
     }
 
     void Update() 
@@ -167,5 +171,7 @@ private IEnumerator boxDialogue() {
         panel.SetActive(false);
 
         image.enabled = true;
+        // exitBtn.enabled = true;
+        exitBtn.SetActive(true);
     }
 }

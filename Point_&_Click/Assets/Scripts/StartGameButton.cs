@@ -11,4 +11,8 @@ public class StartGameButton : MonoBehaviour
     public void ExitGame() {
         Application.Quit();
     }
+
+    public void MainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
