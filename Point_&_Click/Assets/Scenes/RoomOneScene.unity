@@ -41888,6 +41888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: orb1
       objectReference: {fileID: 0}
+    - target: {fileID: 2340396832024468199, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3713500831665968187, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: pickup
       value: 
