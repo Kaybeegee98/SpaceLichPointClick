@@ -2437,6 +2437,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0fdc7553fb92ea14ab9773e68fdf7347, type: 2}
   - {fileID: 2100000, guid: 73120b2e5017578478dc11340365b646, type: 2}
   - {fileID: 2100000, guid: b553f340cd353494086737141fdb247e, type: 2}
+  puzzleDone: 0
   sound: 0
 --- !u!135 &78054024
 SphereCollider:
@@ -23604,6 +23605,7 @@ MonoBehaviour:
   ringInner: {fileID: 1613103935}
   ringMiddle: {fileID: 769430597}
   ringOuter: {fileID: 971772626}
+  matchManager: {fileID: 78054023}
   MoveablePairs:
   - {fileID: 411574041}
   - {fileID: 764624645}
@@ -23614,6 +23616,7 @@ MonoBehaviour:
   - {fileID: 2067021857}
   - {fileID: 743046349}
   - {fileID: 49591883}
+  boxPuzzle: {fileID: 1016062415}
 --- !u!1001 &1084677794
 PrefabInstance:
   m_ObjectHideFlags: 0
