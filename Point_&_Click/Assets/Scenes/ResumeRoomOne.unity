@@ -23601,8 +23601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levManager: {fileID: 1837379892}
   fishMini: {fileID: 1668593582}
-  ringMiddle: {fileID: 769430597}
   ringInner: {fileID: 1613103935}
+  ringMiddle: {fileID: 769430597}
+  ringOuter: {fileID: 971772626}
+  MoveablePairs:
+  - {fileID: 411574041}
+  - {fileID: 764624645}
+  - {fileID: 2059076069}
+  - {fileID: 1118291124}
+  Ports:
+  - {fileID: 1119996477}
+  - {fileID: 2067021857}
+  - {fileID: 743046349}
+  - {fileID: 49591883}
 --- !u!1001 &1084677794
 PrefabInstance:
   m_ObjectHideFlags: 0
