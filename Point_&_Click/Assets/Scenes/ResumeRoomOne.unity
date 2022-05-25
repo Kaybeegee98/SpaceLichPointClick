@@ -2437,6 +2437,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 0fdc7553fb92ea14ab9773e68fdf7347, type: 2}
   - {fileID: 2100000, guid: 73120b2e5017578478dc11340365b646, type: 2}
   - {fileID: 2100000, guid: b553f340cd353494086737141fdb247e, type: 2}
+  puzzleDone: 0
   sound: 0
 --- !u!135 &78054024
 SphereCollider:
@@ -17363,6 +17364,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dull_orb
       objectReference: {fileID: 0}
+    - target: {fileID: 2340396832024468199, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2340396832090656399, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -23604,6 +23609,7 @@ MonoBehaviour:
   ringInner: {fileID: 1613103935}
   ringMiddle: {fileID: 769430597}
   ringOuter: {fileID: 971772626}
+  matchManager: {fileID: 0}
   MoveablePairs:
   - {fileID: 411574041}
   - {fileID: 764624645}
@@ -23614,6 +23620,7 @@ MonoBehaviour:
   - {fileID: 2067021857}
   - {fileID: 743046349}
   - {fileID: 49591883}
+  boxPuzzle: {fileID: 0}
 --- !u!1001 &1084677794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38485,6 +38492,10 @@ PrefabInstance:
     - target: {fileID: 2340396832024468199, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: m_TagString
       value: Orb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2340396832090656386, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3713500831665968187, guid: 22b4b295fb519fe4d93b1256d0ff7bd6, type: 3}
       propertyPath: pickup
