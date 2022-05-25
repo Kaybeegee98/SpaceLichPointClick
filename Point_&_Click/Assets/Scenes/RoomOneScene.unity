@@ -2346,7 +2346,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1613983261}
   orbPurple: {fileID: 721254662}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &137300323
 GameObject:
@@ -10246,7 +10245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 494912728}
   orbPurple: {fileID: 2103469115}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &498151725
 GameObject:
@@ -10651,7 +10649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1611744359}
   orbPurple: {fileID: 506650475}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &514858700
 GameObject:
@@ -26768,7 +26765,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1305424185}
   orbPurple: {fileID: 1507673183}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1307226945
 GameObject:
@@ -27848,7 +27844,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1346993093}
   orbPurple: {fileID: 2143165795}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1001 &1350547734
 PrefabInstance:
@@ -32429,7 +32424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1588106903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33054,7 +33049,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1611744359}
   orbPurple: {fileID: 506650475}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1611842532
 GameObject:
@@ -33365,7 +33359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1613983261}
   orbPurple: {fileID: 721254662}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1619233661
 GameObject:
@@ -34698,7 +34691,6 @@ MonoBehaviour:
   lichSealed: 0
   panel: {fileID: 1019089826}
   image: {fileID: 1588106904}
-  exitBtn: {fileID: 1761899709}
 --- !u!114 &1685284405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34828,7 +34820,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 494912728}
   orbPurple: {fileID: 2103469115}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1711504478
 GameObject:
@@ -38459,7 +38450,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1305424185}
   orbPurple: {fileID: 1507673183}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1876075601 stripped
 GameObject:
@@ -39542,7 +39532,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orbDull: {fileID: 1346993093}
   orbPurple: {fileID: 2143165795}
-  invText: {fileID: 812849204}
   manager: {fileID: 346539993}
 --- !u!1 &1942015326
 GameObject:

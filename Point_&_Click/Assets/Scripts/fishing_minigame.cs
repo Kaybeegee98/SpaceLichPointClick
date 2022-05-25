@@ -35,7 +35,7 @@ public class fishing_minigame : MonoBehaviour
     [SerializeField] Transform progressBarContainer;
     [SerializeField] float hookPower;
     [SerializeField] float progressBarDecay;
-    float catchProgress;
+    public float catchProgress;
 
     bool checkpoint;
 
